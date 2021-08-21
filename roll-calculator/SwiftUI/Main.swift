@@ -1,5 +1,5 @@
 //
-//  roll_calculatorApp.swift
+//  Main.swift
 //  roll-calculator
 //
 //  Created by Ike Mattice on 8/21/21.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct roll_calculatorApp: App {
+struct Main: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalculatorView()
         }
     }
 }

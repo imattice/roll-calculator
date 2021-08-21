@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7FCFAA3C26D1695E00DC8FEB /* roll_calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */; };
-		7FCFAA3E26D1695E00DC8FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */; };
+		7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* Main.swift */; };
+		7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */; };
 		7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */; };
 		7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */; };
 		7FCFAA4D26D1695F00DC8FEB /* roll_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */; };
 		7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */; };
+		7FCFAA6526D16A2E00DC8FEB /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */; };
+		7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */; };
+		7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6926D1ADF400DC8FEB /* DevicePreview.swift */; };
+		7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6B26D1B4C200DC8FEB /* OrientationPreview.swift */; };
+		7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6D26D1C08000DC8FEB /* iOSDevice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +39,19 @@
 
 /* Begin PBXFileReference section */
 		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorApp.swift; sourceTree = "<group>"; };
-		7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7FCFAA3B26D1695E00DC8FEB /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorTests.swift; sourceTree = "<group>"; };
 		7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorUITests.swift; sourceTree = "<group>"; };
+		7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
+		7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibiltyTextPreview.swift; sourceTree = "<group>"; };
+		7FCFAA6926D1ADF400DC8FEB /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
+		7FCFAA6B26D1B4C200DC8FEB /* OrientationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationPreview.swift; sourceTree = "<group>"; };
+		7FCFAA6D26D1C08000DC8FEB /* iOSDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDevice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +102,7 @@
 		7FCFAA3A26D1695E00DC8FEB /* roll-calculator */ = {
 			isa = PBXGroup;
 			children = (
-				7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */,
-				7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */,
+				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
 				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
 				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
 			);
@@ -103,6 +112,7 @@
 		7FCFAA4126D1695F00DC8FEB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				7FCFAA6826D16A4100DC8FEB /* Preview Helpers */,
 				7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -122,6 +132,27 @@
 				7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */,
 			);
 			path = "roll-calculatorUITests";
+			sourceTree = "<group>";
+		};
+		7FCFAA6326D16A1A00DC8FEB /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA3B26D1695E00DC8FEB /* Main.swift */,
+				7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		7FCFAA6826D16A4100DC8FEB /* Preview Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */,
+				7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */,
+				7FCFAA6926D1ADF400DC8FEB /* DevicePreview.swift */,
+				7FCFAA6B26D1B4C200DC8FEB /* OrientationPreview.swift */,
+				7FCFAA6D26D1C08000DC8FEB /* iOSDevice.swift */,
+			);
+			path = "Preview Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCFAA3E26D1695E00DC8FEB /* ContentView.swift in Sources */,
-				7FCFAA3C26D1695E00DC8FEB /* roll_calculatorApp.swift in Sources */,
+				7FCFAA6526D16A2E00DC8FEB /* ColorSchemePreview.swift in Sources */,
+				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
+				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
+				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
+				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
+				7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */,
+				7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +459,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,7 +469,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,7 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -476,7 +512,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNA55J4REY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +537,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNA55J4REY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
