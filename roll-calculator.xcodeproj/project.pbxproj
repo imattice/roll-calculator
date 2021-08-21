@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FCFAA3C26D1695E00DC8FEB /* roll_calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */; };
+		7FCFAA3E26D1695E00DC8FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */; };
+		7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */; };
+		7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */; };
+		7FCFAA4D26D1695F00DC8FEB /* roll_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */; };
+		7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FCFAA4926D1695F00DC8FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FCFAA3026D1695E00DC8FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FCFAA3726D1695E00DC8FEB;
+			remoteInfo = "roll-calculator";
+		};
+		7FCFAA5326D1695F00DC8FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FCFAA3026D1695E00DC8FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FCFAA3726D1695E00DC8FEB;
+			remoteInfo = "roll-calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorApp.swift; sourceTree = "<group>"; };
+		7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorTests.swift; sourceTree = "<group>"; };
+		7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FCFAA3526D1695E00DC8FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA4526D1695F00DC8FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA4F26D1695F00DC8FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FCFAA2F26D1695E00DC8FEB = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA3A26D1695E00DC8FEB /* roll-calculator */,
+				7FCFAA4B26D1695F00DC8FEB /* roll-calculatorTests */,
+				7FCFAA5526D1695F00DC8FEB /* roll-calculatorUITests */,
+				7FCFAA3926D1695E00DC8FEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FCFAA3926D1695E00DC8FEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */,
+				7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */,
+				7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FCFAA3A26D1695E00DC8FEB /* roll-calculator */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA3B26D1695E00DC8FEB /* roll_calculatorApp.swift */,
+				7FCFAA3D26D1695E00DC8FEB /* ContentView.swift */,
+				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
+				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
+			);
+			path = "roll-calculator";
+			sourceTree = "<group>";
+		};
+		7FCFAA4126D1695F00DC8FEB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FCFAA4B26D1695F00DC8FEB /* roll-calculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */,
+			);
+			path = "roll-calculatorTests";
+			sourceTree = "<group>";
+		};
+		7FCFAA5526D1695F00DC8FEB /* roll-calculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */,
+			);
+			path = "roll-calculatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FCFAA3726D1695E00DC8FEB /* roll-calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FCFAA5A26D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculator" */;
+			buildPhases = (
+				7FCFAA3426D1695E00DC8FEB /* Sources */,
+				7FCFAA3526D1695E00DC8FEB /* Frameworks */,
+				7FCFAA3626D1695E00DC8FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "roll-calculator";
+			productName = "roll-calculator";
+			productReference = 7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7FCFAA4726D1695F00DC8FEB /* roll-calculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FCFAA5D26D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculatorTests" */;
+			buildPhases = (
+				7FCFAA4426D1695F00DC8FEB /* Sources */,
+				7FCFAA4526D1695F00DC8FEB /* Frameworks */,
+				7FCFAA4626D1695F00DC8FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FCFAA4A26D1695F00DC8FEB /* PBXTargetDependency */,
+			);
+			name = "roll-calculatorTests";
+			productName = "roll-calculatorTests";
+			productReference = 7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7FCFAA5126D1695F00DC8FEB /* roll-calculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FCFAA6026D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculatorUITests" */;
+			buildPhases = (
+				7FCFAA4E26D1695F00DC8FEB /* Sources */,
+				7FCFAA4F26D1695F00DC8FEB /* Frameworks */,
+				7FCFAA5026D1695F00DC8FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FCFAA5426D1695F00DC8FEB /* PBXTargetDependency */,
+			);
+			name = "roll-calculatorUITests";
+			productName = "roll-calculatorUITests";
+			productReference = 7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FCFAA3026D1695E00DC8FEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					7FCFAA3726D1695E00DC8FEB = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					7FCFAA4726D1695F00DC8FEB = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 7FCFAA3726D1695E00DC8FEB;
+					};
+					7FCFAA5126D1695F00DC8FEB = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 7FCFAA3726D1695E00DC8FEB;
+					};
+				};
+			};
+			buildConfigurationList = 7FCFAA3326D1695E00DC8FEB /* Build configuration list for PBXProject "roll-calculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FCFAA2F26D1695E00DC8FEB;
+			productRefGroup = 7FCFAA3926D1695E00DC8FEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FCFAA3726D1695E00DC8FEB /* roll-calculator */,
+				7FCFAA4726D1695F00DC8FEB /* roll-calculatorTests */,
+				7FCFAA5126D1695F00DC8FEB /* roll-calculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FCFAA3626D1695E00DC8FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */,
+				7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA4626D1695F00DC8FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA5026D1695F00DC8FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FCFAA3426D1695E00DC8FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCFAA3E26D1695E00DC8FEB /* ContentView.swift in Sources */,
+				7FCFAA3C26D1695E00DC8FEB /* roll_calculatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA4426D1695F00DC8FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCFAA4D26D1695F00DC8FEB /* roll_calculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FCFAA4E26D1695F00DC8FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FCFAA4A26D1695F00DC8FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FCFAA3726D1695E00DC8FEB /* roll-calculator */;
+			targetProxy = 7FCFAA4926D1695F00DC8FEB /* PBXContainerItemProxy */;
+		};
+		7FCFAA5426D1695F00DC8FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FCFAA3726D1695E00DC8FEB /* roll-calculator */;
+			targetProxy = 7FCFAA5326D1695F00DC8FEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7FCFAA5826D1695F00DC8FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7FCFAA5926D1695F00DC8FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FCFAA5B26D1695F00DC8FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"roll-calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FCFAA5C26D1695F00DC8FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"roll-calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7FCFAA5E26D1695F00DC8FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/roll-calculator.app/roll-calculator";
+			};
+			name = Debug;
+		};
+		7FCFAA5F26D1695F00DC8FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/roll-calculator.app/roll-calculator";
+			};
+			name = Release;
+		};
+		7FCFAA6126D1695F00DC8FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "roll-calculator";
+			};
+			name = Debug;
+		};
+		7FCFAA6226D1695F00DC8FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VNA55J4REY;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "roll-calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FCFAA3326D1695E00DC8FEB /* Build configuration list for PBXProject "roll-calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCFAA5826D1695F00DC8FEB /* Debug */,
+				7FCFAA5926D1695F00DC8FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FCFAA5A26D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCFAA5B26D1695F00DC8FEB /* Debug */,
+				7FCFAA5C26D1695F00DC8FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FCFAA5D26D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCFAA5E26D1695F00DC8FEB /* Debug */,
+				7FCFAA5F26D1695F00DC8FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FCFAA6026D1695F00DC8FEB /* Build configuration list for PBXNativeTarget "roll-calculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FCFAA6126D1695F00DC8FEB /* Debug */,
+				7FCFAA6226D1695F00DC8FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FCFAA3026D1695E00DC8FEB /* Project object */;
+}
