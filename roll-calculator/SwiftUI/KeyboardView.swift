@@ -57,7 +57,6 @@ struct KeyboardView: View {
                     KeyView(plusText)
                 }
             }
-            .frame(maxHeight: geo.size.height * 2/3)
         }
     }
 }

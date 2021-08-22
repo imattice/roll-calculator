@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct DisplayView: View {
-    @Binding var resultText: String
-    @Binding var calculationText: String
+    @EnvironmentObject var calculation: Calculation
+    
+    var methodText: String {
+        if calculation.method != "" {
+            return "(\(calculation.method))"
+        }
+        else {
+            return ""
+        }
+    }
     
     var body: some View {
         HStack {
             Spacer()
             VStack(alignment: .trailing) {
-            Text(resultText)
-                .font(.largeTitle)
-            Text("(\(calculationText))")
-                .font(.caption)
+                Text(calculation.result)
+                    .font(.largeTitle)
+                Text(methodText)
+                    .font(.caption)
             }
         }
         .padding()
@@ -31,8 +39,7 @@ struct DisplayView_Previews: PreviewProvider {
     @State static var calculationText: String = "16d8"
     
     static var previews: some View {
-        DisplayView(resultText: $resultText,
-                    calculationText: $calculationText)
+        DisplayView()
             .previewLayout(.sizeThatFits)
     }
 }
