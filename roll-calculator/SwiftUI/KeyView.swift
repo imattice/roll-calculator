@@ -16,9 +16,14 @@ struct KeyView: View {
     let borderWidth: CGFloat = 1
     
     var body: some View {
-        HStack {
+        VStack {
             Spacer()
-        Text(value)
+            HStack {
+                Spacer()
+                Text(value)
+                    .font(.title)
+                Spacer()
+            }
             Spacer()
         }
         .padding()

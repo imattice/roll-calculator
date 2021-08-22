@@ -31,7 +31,6 @@ struct KeyboardView: View {
     var body: some View {
         GeometryReader { geo in
             VStack(spacing: buttonSpacing) {
-                Spacer()
                 HStack(spacing: buttonSpacing) {
                     KeyView(sevenText)
                     KeyView(eightText)
@@ -58,14 +57,13 @@ struct KeyboardView: View {
                     KeyView(plusText)
                 }
             }
+            .frame(maxHeight: geo.size.height * 2/3)
         }
     }
 }
 
 struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
-
             KeyboardView()
-//            .previewLayout(.sizeThatFits)
     }
 }
