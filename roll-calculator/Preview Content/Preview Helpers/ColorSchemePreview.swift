@@ -16,7 +16,7 @@ struct ColorSchemePreview<Content:View>: View {
         ForEach(ColorScheme.allCases, id: \.self) { scheme in
             
             content()
-                .previewDisplayName("\(scheme) Mode")
+                .previewDisplayName("\(String(describing: scheme).capitalized) Mode")
         }
     }
     
