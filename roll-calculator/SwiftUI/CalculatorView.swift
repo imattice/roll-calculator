@@ -18,6 +18,8 @@ struct CalculatorView: View {
                     .background(Color.red)
                 KeyboardView()
             }
+            .navigationBarItems(leading: Image("gearshape"),
+                                trailing: Image("list.dash"))
         }
     }
 }
