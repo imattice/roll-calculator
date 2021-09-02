@@ -13,6 +13,7 @@
 		7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92D26D2C84100A55FB8 /* Calculation.swift */; };
 		7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */; };
 		7FC0C93226E1598600A55FB8 /* RollLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93126E1598600A55FB8 /* RollLog.swift */; };
+		7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */; };
 		7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* Main.swift */; };
 		7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */; };
 		7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		7FC0C92D26D2C84100A55FB8 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogView.swift; sourceTree = "<group>"; };
 		7FC0C93126E1598600A55FB8 /* RollLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLog.swift; sourceTree = "<group>"; };
+		7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogButton.swift; sourceTree = "<group>"; };
 		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA3B26D1695E00DC8FEB /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				7FCFAA3B26D1695E00DC8FEB /* Main.swift */,
 				7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */,
+				7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */,
 				7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */,
 				7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */,
 				7FC0C92926D1E50500A55FB8 /* KeyView.swift */,
@@ -314,6 +317,7 @@
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
+				7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */,
 				7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */,
 				7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */,
 			);
