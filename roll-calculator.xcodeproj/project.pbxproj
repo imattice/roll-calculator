@@ -14,11 +14,11 @@
 		7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */; };
 		7FC0C93226E1598600A55FB8 /* RollLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93126E1598600A55FB8 /* RollLog.swift */; };
 		7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */; };
+		7FC0C93626E163AD00A55FB8 /* CalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */; };
 		7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* Main.swift */; };
 		7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */; };
 		7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */; };
 		7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */; };
-		7FCFAA4D26D1695F00DC8FEB /* roll_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */; };
 		7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */; };
 		7FCFAA6526D16A2E00DC8FEB /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */; };
 		7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */; };
@@ -52,13 +52,13 @@
 		7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogView.swift; sourceTree = "<group>"; };
 		7FC0C93126E1598600A55FB8 /* RollLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLog.swift; sourceTree = "<group>"; };
 		7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogButton.swift; sourceTree = "<group>"; };
+		7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTests.swift; sourceTree = "<group>"; };
 		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA3B26D1695E00DC8FEB /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorTests.swift; sourceTree = "<group>"; };
 		7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorUITests.swift; sourceTree = "<group>"; };
 		7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		7FCFAA4B26D1695F00DC8FEB /* roll-calculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FCFAA4C26D1695F00DC8FEB /* roll_calculatorTests.swift */,
+				7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */,
 			);
 			path = "roll-calculatorTests";
 			sourceTree = "<group>";
@@ -247,6 +247,7 @@
 					};
 					7FCFAA4726D1695F00DC8FEB = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 						TestTargetID = 7FCFAA3726D1695E00DC8FEB;
 					};
 					7FCFAA5126D1695F00DC8FEB = {
@@ -327,7 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCFAA4D26D1695F00DC8FEB /* roll_calculatorTests.swift in Sources */,
+				7FC0C93626E163AD00A55FB8 /* CalculationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +537,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNA55J4REY;
@@ -550,6 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculatorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/roll-calculator.app/roll-calculator";
@@ -561,6 +564,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VNA55J4REY;
