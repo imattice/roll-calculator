@@ -26,5 +26,7 @@ struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView()
             .previewLayout(.sizeThatFits)
+            .environmentObject(Calculation())
+
     }
 }

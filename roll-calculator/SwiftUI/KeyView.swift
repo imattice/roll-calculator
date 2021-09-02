@@ -23,6 +23,7 @@ struct KeyView: View {
                 Spacer()
                 Text(value)
                     .font(.title)
+                    .minimumScaleFactor(0.8)
                 Spacer()
             }
             Spacer()
@@ -48,6 +49,7 @@ struct KeyView_Previews: PreviewProvider {
     static let two: String = "2"
     static let three: String = "3"
     static let equal: String = "="
+    static let d100: String = "d100"
     
     static var previews: some View {
         Group {
@@ -56,7 +58,7 @@ struct KeyView_Previews: PreviewProvider {
             HStack(spacing: 0) {
                 KeyView(one)
                 KeyView(two)
-                KeyView(three)
+                KeyView(d100)
             }
         }
         .previewLayout(.sizeThatFits)
