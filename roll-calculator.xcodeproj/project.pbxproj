@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3F22FC26E3BDFD007DF0BC /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F22FB26E3BDFD007DF0BC /* Roll.swift */; };
+		7F3F22FE26E3C06B007DF0BC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F22FD26E3C06B007DF0BC /* String.swift */; };
+		7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F230026E3C0F6007DF0BC /* Regex.swift */; };
+		7F3F230326E43E39007DF0BC /* RollError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F230226E43E39007DF0BC /* RollError.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
 		7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92926D1E50500A55FB8 /* KeyView.swift */; };
 		7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3F22FB26E3BDFD007DF0BC /* Roll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
+		7F3F22FD26E3C06B007DF0BC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7F3F230026E3C0F6007DF0BC /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		7F3F230226E43E39007DF0BC /* RollError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollError.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		7FC0C92926D1E50500A55FB8 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F3F22FF26E3C074007DF0BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F22FD26E3C06B007DF0BC /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F3F230426E43E44007DF0BC /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F230226E43E39007DF0BC /* RollError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		7FCFAA2F26D1695E00DC8FEB = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +141,12 @@
 			isa = PBXGroup;
 			children = (
 				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
+				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
+				7F3F230026E3C0F6007DF0BC /* Regex.swift */,
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
+				7F3F230426E43E44007DF0BC /* Errors */,
 				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
+				7F3F22FF26E3C074007DF0BC /* Extensions */,
 				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
 				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
 			);
@@ -313,6 +341,7 @@
 				7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */,
 				7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */,
 				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
+				7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */,
 				7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */,
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
@@ -321,6 +350,9 @@
 				7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */,
 				7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */,
 				7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */,
+				7F3F230326E43E39007DF0BC /* RollError.swift in Sources */,
+				7F3F22FE26E3C06B007DF0BC /* String.swift in Sources */,
+				7F3F22FC26E3BDFD007DF0BC /* Roll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
