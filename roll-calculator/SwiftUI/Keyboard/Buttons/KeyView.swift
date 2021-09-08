@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct KeyView: View {
-    @EnvironmentObject var calculation: Calculation
     let value: String
     
     let fontColor: Color = .yellow
@@ -33,9 +32,10 @@ struct KeyView: View {
         .background(backgroundColor)
         .border(borderColor,
                 width: borderWidth)
-        .onTapGesture {
-            calculation.method += value
-        }
+    }
+    
+    func onTap() {
+        calculation.method += value
     }
     
     init(_ value: String) {

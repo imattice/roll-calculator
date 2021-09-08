@@ -43,40 +43,40 @@ struct KeyboardView: View {
         GeometryReader { geo in
             VStack(spacing: buttonSpacing) {
                 HStack(spacing: buttonSpacing) {
-                    KeyView(d12Text)
-                    KeyView(d20Text)
-                    KeyView(d100Text)
-                    KeyView(dXText)
+                    DieButton(d12Text)
+                    DieButton(d20Text)
+                    DieButton(d100Text)
+                    DieButton(dXText)
                 }
                 HStack(spacing: buttonSpacing) {
-                    KeyView(d4Text)
-                    KeyView(d6Text)
-                    KeyView(d8Text)
-                    KeyView(d10Text)
+                    DieButton(d4Text)
+                    DieButton(d6Text)
+                    DieButton(d8Text)
+                    DieButton(d10Text)
                 }
                 HStack(spacing: buttonSpacing) {
-                    KeyView(sevenText)
-                    KeyView(eightText)
-                    KeyView(nineText)
-                    KeyView(divideText)
+                    NumericButton(sevenText)
+                    NumericButton(eightText)
+                    NumericButton(nineText)
+                    OpperandButton(divideText)
                 }
                 HStack(spacing: buttonSpacing) {
-                    KeyView(fourText)
-                    KeyView(fiveText)
-                    KeyView(sixText)
-                    KeyView(multiplyText)
+                    NumericButton(fourText)
+                    NumericButton(fiveText)
+                    NumericButton(sixText)
+                    OpperandButton(multiplyText)
                 }
                 HStack(spacing: buttonSpacing) {
-                    KeyView(oneText)
-                    KeyView(twoText)
-                    KeyView(threeText)
-                    KeyView(minusText)
+                    NumericButton(oneText)
+                    NumericButton(twoText)
+                    NumericButton(threeText)
+                    OpperandButton(minusText)
                 }
                 HStack(spacing: buttonSpacing) {
-                    KeyView(zeroText)
-                    KeyView(equalText)
+                    NumericButton(zeroText)
+                    EvaluateButton()
                         .frame(width: geo.size.width * 1/2)
-                    KeyView(plusText)
+                    OpperandButton(plusText)
                 }
             }
         }

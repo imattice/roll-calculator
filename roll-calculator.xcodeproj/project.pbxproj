@@ -11,6 +11,10 @@
 		7F3F22FE26E3C06B007DF0BC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F22FD26E3C06B007DF0BC /* String.swift */; };
 		7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F230026E3C0F6007DF0BC /* Regex.swift */; };
 		7F3F230326E43E39007DF0BC /* RollError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F230226E43E39007DF0BC /* RollError.swift */; };
+		7F3F68EA26E839F20055ABC7 /* EvaluateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */; };
+		7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */; };
+		7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68ED26E83F040055ABC7 /* DieButton.swift */; };
+		7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
 		7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92926D1E50500A55FB8 /* KeyView.swift */; };
 		7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */; };
@@ -53,6 +57,10 @@
 		7F3F22FD26E3C06B007DF0BC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F3F230026E3C0F6007DF0BC /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		7F3F230226E43E39007DF0BC /* RollError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollError.swift; sourceTree = "<group>"; };
+		7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateButton.swift; sourceTree = "<group>"; };
+		7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericButton.swift; sourceTree = "<group>"; };
+		7F3F68ED26E83F040055ABC7 /* DieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieButton.swift; sourceTree = "<group>"; };
+		7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpperandButton.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		7FC0C92926D1E50500A55FB8 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
@@ -115,6 +123,27 @@
 				7F3F230226E43E39007DF0BC /* RollError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		7F3F68F126E83F2D0055ABC7 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */,
+				7F3F68F226E83F470055ABC7 /* Buttons */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		7F3F68F226E83F470055ABC7 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7FC0C92926D1E50500A55FB8 /* KeyView.swift */,
+				7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */,
+				7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */,
+				7F3F68ED26E83F040055ABC7 /* DieButton.swift */,
+				7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		7FCFAA2F26D1695E00DC8FEB = {
@@ -184,9 +213,8 @@
 				7FCFAA3B26D1695E00DC8FEB /* Main.swift */,
 				7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */,
 				7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */,
-				7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */,
 				7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */,
-				7FC0C92926D1E50500A55FB8 /* KeyView.swift */,
+				7F3F68F126E83F2D0055ABC7 /* Keyboard */,
 				7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */,
 			);
 			path = SwiftUI;
@@ -342,7 +370,11 @@
 				7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */,
 				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
 				7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */,
+				7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */,
+				7F3F68EA26E839F20055ABC7 /* EvaluateButton.swift in Sources */,
 				7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */,
+				7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */,
+				7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */,
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
