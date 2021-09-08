@@ -25,11 +25,14 @@ struct DisplayView: View {
             VStack(alignment: .trailing) {
                 Text(calculation.result)
                     .font(.largeTitle)
+                    .foregroundColor(AppColor.DisplayView.resultText)
                 Text(methodText)
                     .font(.title2)
+                    .foregroundColor(AppColor.DisplayView.methodText)
             }
         }
         .padding()
+        .background(AppColor.DisplayView.background)
         .frame(maxWidth: .infinity)
     }
 }

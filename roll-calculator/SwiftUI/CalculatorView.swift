@@ -15,14 +15,21 @@ struct CalculatorView: View {
         NavigationView {
             VStack(spacing: 0) {
                 DisplayView()
-                    .background(Color.red)
                 KeyboardView()
             }
-            .navigationBarItems(trailing: RollLogButton())
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    RollLogNavigationButton()
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    ProfileNavigationButton()
+                }
+            }
         }
     }
 }
 
+//MARK: - Previews
 struct CalculatorView_Previews: PreviewProvider {
     @State static var calculation = Calculation(method: "3d8+4", result: "24")
     
@@ -30,6 +37,5 @@ struct CalculatorView_Previews: PreviewProvider {
         CalculatorView()
             .previewLayout(.sizeThatFits)
             .environmentObject(calculation)
-
     }
 }

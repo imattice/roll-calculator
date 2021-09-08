@@ -14,6 +14,9 @@ struct OpperandButton: View {
     
     var body: some View {
         KeyView(value)
+            .foregroundColor(AppColor.KeyViews.Opperand.text)
+            .background(AppColor.KeyViews.Opperand.background)
+
             .onTapGesture {
                 onTap()
             }

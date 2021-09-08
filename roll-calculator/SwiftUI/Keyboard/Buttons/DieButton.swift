@@ -14,6 +14,9 @@ struct DieButton: View {
     
     var body: some View {
         KeyView(value)
+            .foregroundColor(AppColor.KeyViews.Die.text)
+            .background(AppColor.KeyViews.Die.background)
+
             .onTapGesture {
                 onTap()
             }

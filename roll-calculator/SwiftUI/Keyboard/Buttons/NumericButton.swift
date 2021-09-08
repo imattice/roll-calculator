@@ -14,6 +14,8 @@ struct NumericButton: View {
     
     var body: some View {
         KeyView(value)
+            .foregroundColor(AppColor.KeyViews.Numeric.text)
+            .background(AppColor.KeyViews.Numeric.background)
             .onTapGesture {
                 onTap()
             }

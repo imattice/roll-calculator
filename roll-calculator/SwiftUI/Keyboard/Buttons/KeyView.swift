@@ -10,9 +10,6 @@ import SwiftUI
 struct KeyView: View {
     let value: String
     
-    let fontColor: Color = .yellow
-    let backgroundColor: Color = .gray
-    let borderColor: Color = .black
     let borderWidth: CGFloat = 1
     
     var body: some View {
@@ -28,9 +25,8 @@ struct KeyView: View {
             Spacer()
         }
         .padding()
-        .foregroundColor(fontColor)
-        .background(backgroundColor)
-        .border(borderColor,
+
+        .border(AppColor.KeyViews.borderColor,
                 width: borderWidth)
     }
         

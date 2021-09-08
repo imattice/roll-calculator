@@ -12,6 +12,8 @@ struct EvaluateButton: View {
 
     var body: some View {
         KeyView("=")
+            .foregroundColor(AppColor.KeyViews.Evaluate.text)
+            .background(AppColor.KeyViews.Evaluate.background)
             .onTapGesture {
                 onTap()
             }
@@ -22,6 +24,7 @@ struct EvaluateButton: View {
     }
 }
 
+//MARK: - Previews
 struct EvaluateButton_Previews: PreviewProvider {
     static var previews: some View {
         EvaluateButton()
