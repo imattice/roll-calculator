@@ -16,7 +16,7 @@ struct OpperandButton: View {
         KeyView(value)
             .foregroundColor(AppColor.KeyViews.Opperand.text)
             .background(AppColor.KeyViews.Opperand.background)
-
+            .font(Font.bold(.title)())
             .onTapGesture {
                 onTap()
             }
@@ -33,7 +33,7 @@ struct OpperandButton: View {
 
 //MARK: - Previews
 struct OpperandButton_Previews: PreviewProvider {
-    static let plus: String = "="
+    static let plus: String = "+"
     static let minus: String = "-"
 
     static var previews: some View {
