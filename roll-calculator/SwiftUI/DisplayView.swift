@@ -26,7 +26,7 @@ struct DisplayView: View {
                 Text(calculation.result)
                     .font(.largeTitle)
                 Text(methodText)
-                    .font(.caption)
+                    .font(.title2)
             }
         }
         .padding()
@@ -36,11 +36,11 @@ struct DisplayView: View {
 
 //MARK: - Previews
 struct DisplayView_Previews: PreviewProvider {
-    @State static var resultText: String = "64"
-    @State static var calculationText: String = "16d8"
+    @State static var calculation = Calculation(method: "1d10+5", result: "13")
     
     static var previews: some View {
         DisplayView()
+            .environmentObject(calculation)
             .previewLayout(.sizeThatFits)
     }
 }

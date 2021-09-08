@@ -24,10 +24,12 @@ struct CalculatorView: View {
 }
 
 struct CalculatorView_Previews: PreviewProvider {
+    @State static var calculation = Calculation(method: "3d8+4", result: "24")
+    
     static var previews: some View {
         CalculatorView()
             .previewLayout(.sizeThatFits)
-            .environmentObject(Calculation())
+            .environmentObject(calculation)
 
     }
 }
