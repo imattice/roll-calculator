@@ -15,13 +15,17 @@
 		7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */; };
 		7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68ED26E83F040055ABC7 /* DieButton.swift */; };
 		7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */; };
+		7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68F626E8497C0055ABC7 /* AppColor.swift */; };
+		7F3F68FA26E84BB80055ABC7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F68F926E84BB80055ABC7 /* Colors.xcassets */; };
+		7F3F68FD26E852B40055ABC7 /* ProfileNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */; };
+		7F3F68FF26E853520055ABC7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FE26E853520055ABC7 /* Color.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
 		7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92926D1E50500A55FB8 /* KeyView.swift */; };
 		7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */; };
 		7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92D26D2C84100A55FB8 /* Calculation.swift */; };
 		7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */; };
 		7FC0C93226E1598600A55FB8 /* RollLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93126E1598600A55FB8 /* RollLog.swift */; };
-		7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */; };
+		7FC0C93426E160DE00A55FB8 /* RollLogNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93326E160DE00A55FB8 /* RollLogNavigationButton.swift */; };
 		7FC0C93626E163AD00A55FB8 /* CalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */; };
 		7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3B26D1695E00DC8FEB /* Main.swift */; };
 		7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */; };
@@ -61,13 +65,17 @@
 		7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericButton.swift; sourceTree = "<group>"; };
 		7F3F68ED26E83F040055ABC7 /* DieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieButton.swift; sourceTree = "<group>"; };
 		7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpperandButton.swift; sourceTree = "<group>"; };
+		7F3F68F626E8497C0055ABC7 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7F3F68F926E84BB80055ABC7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationButton.swift; sourceTree = "<group>"; };
+		7F3F68FE26E853520055ABC7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		7FC0C92926D1E50500A55FB8 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		7FC0C92D26D2C84100A55FB8 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogView.swift; sourceTree = "<group>"; };
 		7FC0C93126E1598600A55FB8 /* RollLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLog.swift; sourceTree = "<group>"; };
-		7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogButton.swift; sourceTree = "<group>"; };
+		7FC0C93326E160DE00A55FB8 /* RollLogNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLogNavigationButton.swift; sourceTree = "<group>"; };
 		7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTests.swift; sourceTree = "<group>"; };
 		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA3B26D1695E00DC8FEB /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7F3F22FD26E3C06B007DF0BC /* String.swift */,
+				7F3F68FE26E853520055ABC7 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,9 +159,27 @@
 			isa = PBXGroup;
 			children = (
 				7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */,
-				7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */,
 			);
 			path = RollLog;
+			sourceTree = "<group>";
+		};
+		7F3F68F826E849910055ABC7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
+				7F3F68F926E84BB80055ABC7 /* Colors.xcassets */,
+				7F3F68F626E8497C0055ABC7 /* AppColor.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7F3F68FB26E852720055ABC7 /* NavigationButtons */ = {
+			isa = PBXGroup;
+			children = (
+				7FC0C93326E160DE00A55FB8 /* RollLogNavigationButton.swift */,
+				7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */,
+			);
+			path = NavigationButtons;
 			sourceTree = "<group>";
 		};
 		7FCFAA2F26D1695E00DC8FEB = {
@@ -185,7 +212,7 @@
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
 				7F3F230426E43E44007DF0BC /* Errors */,
 				7F3F22FF26E3C074007DF0BC /* Extensions */,
-				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
+				7F3F68F826E849910055ABC7 /* Assets */,
 				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
 			);
 			path = "roll-calculator";
@@ -223,6 +250,7 @@
 				7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */,
 				7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */,
 				7F3F68F126E83F2D0055ABC7 /* Keyboard */,
+				7F3F68FB26E852720055ABC7 /* NavigationButtons */,
 				7F3F68F526E842990055ABC7 /* RollLog */,
 			);
 			path = SwiftUI;
@@ -345,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F3F68FA26E84BB80055ABC7 /* Colors.xcassets in Resources */,
 				7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */,
 				7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */,
 			);
@@ -376,6 +405,7 @@
 				7FC0C93226E1598600A55FB8 /* RollLog.swift in Sources */,
 				7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */,
 				7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */,
+				7F3F68FD26E852B40055ABC7 /* ProfileNavigationButton.swift in Sources */,
 				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
 				7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */,
 				7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */,
@@ -384,10 +414,12 @@
 				7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */,
 				7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */,
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
+				7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
-				7FC0C93426E160DE00A55FB8 /* RollLogButton.swift in Sources */,
+				7F3F68FF26E853520055ABC7 /* Color.swift in Sources */,
+				7FC0C93426E160DE00A55FB8 /* RollLogNavigationButton.swift in Sources */,
 				7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */,
 				7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */,
 				7F3F230326E43E39007DF0BC /* RollError.swift in Sources */,
