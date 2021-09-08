@@ -30,15 +30,6 @@ class CalculationTests: XCTestCase {
         }
     }
     
-    func testRollValueCalculation() {
-        let calculations = [
-            (Calculation(method: "d4"), result: 2),
-            (Calculation(method: "1-1"), result: 0),
-            (Calculation(method: "2*2"), result: 4),
-            (Calculation(method: "9/3"), result: 3)
-        ]
-    }
-    
     func testRollsReplaced() {
         let calculations = [
             (Calculation(method: "1d4"), maxStringLength: 1),

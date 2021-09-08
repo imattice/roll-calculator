@@ -37,6 +37,11 @@ struct Roll {
         self.dieValue = value
     }
     
+    ///Returns a string of the results array, joined by a "+" and surrounded by parentheses
+    func resultsString() -> String {
+        return "(\(results.map({ String($0) }).joined(separator: "+")))"
+    }
+    
     ///Calculates random numbers and fills the results with those results
     mutating func calculate() -> Int {
         results = [Int]()

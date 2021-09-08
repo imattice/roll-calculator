@@ -21,11 +21,18 @@ class Calculation: ObservableObject, Identifiable {
     
     ///Calculate a new result for
     @discardableResult func calculate() -> Result<Int, CalculationError> {
-        let expression = NSExpression(format: method)
+        let rollsReplaced = rollsReplaced(method)
+        
+        let expression = NSExpression(format: rollsReplaced)
         guard let result = expression.expressionValue(with: nil, context: nil) as? Int else {
             return .failure(.invalidCalculation)
         }
+        
         self.result = String(result)
+        recordCalculation()
+        
+        method = rollsReplaced
+
         return .success(result)
     }
     
@@ -40,12 +47,14 @@ class Calculation: ObservableObject, Identifiable {
         }
         
         let result = roll.calculate()
-        
-        //replace range with roll result
         let replacedText = text.replacingCharacters(in: matchRange, with: String(result))
         
-        //Check for more matches recursively
         return rollsReplaced(replacedText)
+    }
+    
+    ///Saves the calculation to the current RollLog
+    func recordCalculation() {
+//        RollLog.shared.addCalculation(self)
     }
     
     init(method: String = "", result: String = "") {

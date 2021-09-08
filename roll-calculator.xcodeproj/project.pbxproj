@@ -146,6 +146,15 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		7F3F68F526E842990055ABC7 /* RollLog */ = {
+			isa = PBXGroup;
+			children = (
+				7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */,
+				7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */,
+			);
+			path = RollLog;
+			sourceTree = "<group>";
+		};
 		7FCFAA2F26D1695E00DC8FEB = {
 			isa = PBXGroup;
 			children = (
@@ -169,12 +178,12 @@
 		7FCFAA3A26D1695E00DC8FEB /* roll-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
 				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
 				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
 				7F3F230026E3C0F6007DF0BC /* Regex.swift */,
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
 				7F3F230426E43E44007DF0BC /* Errors */,
-				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
 				7F3F22FF26E3C074007DF0BC /* Extensions */,
 				7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */,
 				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
@@ -212,10 +221,9 @@
 			children = (
 				7FCFAA3B26D1695E00DC8FEB /* Main.swift */,
 				7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */,
-				7FC0C93326E160DE00A55FB8 /* RollLogButton.swift */,
 				7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */,
 				7F3F68F126E83F2D0055ABC7 /* Keyboard */,
-				7FC0C92F26E1596A00A55FB8 /* RollLogView.swift */,
+				7F3F68F526E842990055ABC7 /* RollLog */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";

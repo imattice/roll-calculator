@@ -12,7 +12,7 @@ struct DisplayView: View {
     
     var methodText: String {
         if calculation.method != "" {
-            return "(\(calculation.method))"
+            return String(calculation.method)
         }
         else {
             return ""
@@ -34,6 +34,7 @@ struct DisplayView: View {
     }
 }
 
+//MARK: - Previews
 struct DisplayView_Previews: PreviewProvider {
     @State static var resultText: String = "64"
     @State static var calculationText: String = "16d8"

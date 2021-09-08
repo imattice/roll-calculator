@@ -33,11 +33,7 @@ struct KeyView: View {
         .border(borderColor,
                 width: borderWidth)
     }
-    
-    func onTap() {
-        calculation.method += value
-    }
-    
+        
     init(_ value: String) {
         self.value = value
     }
