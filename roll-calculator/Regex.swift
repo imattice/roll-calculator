@@ -7,15 +7,16 @@
 
 import Foundation
 
-///Options for regex patterns
+/// Options for regex patterns
 enum Regex {
-    ///The pattren for dice rolls; e.g. "10d20'
+    /// The pattren for dice rolls; e.g. "10d20'
     case dieRoll
-    
-    ///The stirng pattern for the selected regex option
+
+    /// The stirng pattern for the selected regex option
     var pattern: String {
         switch self {
-        case .dieRoll: return #"\d+d\d+"#
+        case .dieRoll:
+            return #"\d+d\d+"#
         }
     }
 }

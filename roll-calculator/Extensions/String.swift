@@ -8,8 +8,8 @@
 import Foundation
 
 extension String {
-    ///Checks that the string matches the given regex pattern
+    /// Checks that the string matches the given regex pattern
     func matches(_ regex: String) -> Bool {
-        return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+        self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
     }
 }

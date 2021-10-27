@@ -18,13 +18,13 @@ struct EvaluateButton: View {
                 onTap()
             }
     }
-    
+
     func onTap() {
         calculation.calculate()
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct EvaluateButton_Previews: PreviewProvider {
     static var previews: some View {
         EvaluateButton()

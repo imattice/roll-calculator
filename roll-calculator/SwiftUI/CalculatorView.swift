@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    let displayViewScaleFactor: CGFloat = 1/4
-    let keyboardViewScaleFactor: CGFloat = 3/4
-    
+    let displayViewScaleFactor: CGFloat = 1 / 4
+    let keyboardViewScaleFactor: CGFloat = 3 / 4
+
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
@@ -29,10 +29,10 @@ struct CalculatorView: View {
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct CalculatorView_Previews: PreviewProvider {
-    @State static var calculation = Calculation(method: "3d8+4", result: "24")
-    
+    @State static var calculation: Calculation = Calculation(method: "3d8+4", result: "24")
+
     static var previews: some View {
         CalculatorView()
             .previewLayout(.sizeThatFits)

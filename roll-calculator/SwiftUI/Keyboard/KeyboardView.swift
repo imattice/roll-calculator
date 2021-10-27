@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    
-    //Mark: Text
-    //Numbers
+    // MARK: Text
+    // Numbers
     let oneText: String = "1"
     let twoText: String = "2"
     let threeText: String = "3"
@@ -21,7 +20,7 @@ struct KeyboardView: View {
     let eightText: String = "8"
     let nineText: String = "9"
     let zeroText: String = "0"
-    //Die
+    // Die
     let d4Text: String = "d4"
     let d6Text: String = "d6"
     let d8Text: String = "d8"
@@ -30,15 +29,15 @@ struct KeyboardView: View {
     let d20Text: String = "d20"
     let d100Text: String = "d100"
     let dXText: String = "dx"
-    //Operators
+    // Operators
     let plusText: String = "+"
     let minusText: String = "-"
     let multiplyText: String = "x"
     let divideText: String = "/"
     let equalText: String = "="
-    
+
+    // MARK: Spacing
     let buttonSpacing: CGFloat = 0
-    
     var body: some View {
         GeometryReader { geo in
             VStack(spacing: buttonSpacing) {
@@ -75,7 +74,7 @@ struct KeyboardView: View {
                 HStack(spacing: buttonSpacing) {
                     NumericButton(zeroText)
                     EvaluateButton()
-                        .frame(width: geo.size.width * 1/2)
+                        .frame(width: geo.size.width * 0.5)
                     OpperandButton(plusText)
                 }
             }

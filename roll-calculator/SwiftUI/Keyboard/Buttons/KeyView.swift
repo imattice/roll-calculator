@@ -9,9 +9,9 @@ import SwiftUI
 
 struct KeyView: View {
     let value: String
-    
+
     let borderWidth: CGFloat = 1
-    
+
     var body: some View {
         VStack {
             Spacer()
@@ -26,27 +26,28 @@ struct KeyView: View {
         }
         .padding()
 
-        .border(AppColor.KeyViews.borderColor,
-                width: borderWidth)
+        .border(
+            AppColor.KeyViews.borderColor,
+            width: borderWidth)
     }
-        
+
     init(_ value: String) {
         self.value = value
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct KeyView_Previews: PreviewProvider {
     static let one: String = "1"
     static let two: String = "2"
     static let three: String = "3"
     static let equal: String = "="
     static let d100: String = "d100"
-    
+
     static var previews: some View {
         Group {
             KeyView(one)
-            
+
             HStack(spacing: 0) {
                 KeyView(one)
                 KeyView(two)

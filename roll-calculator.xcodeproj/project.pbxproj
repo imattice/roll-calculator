@@ -19,6 +19,8 @@
 		7F3F68FA26E84BB80055ABC7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F68F926E84BB80055ABC7 /* Colors.xcassets */; };
 		7F3F68FD26E852B40055ABC7 /* ProfileNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */; };
 		7F3F68FF26E853520055ABC7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FE26E853520055ABC7 /* Color.swift */; };
+		7F9AE2612729CD0200E42678 /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */; };
+		7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2622729CFF400E42678 /* CalculationError.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
 		7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92926D1E50500A55FB8 /* KeyView.swift */; };
 		7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */; };
@@ -31,7 +33,7 @@
 		7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */; };
 		7FCFAA4026D1695F00DC8FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */; };
 		7FCFAA4326D1695F00DC8FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */; };
-		7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */; };
+		7FCFAA5726D1695F00DC8FEB /* RollCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA5626D1695F00DC8FEB /* RollCalculatorUITests.swift */; };
 		7FCFAA6526D16A2E00DC8FEB /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */; };
 		7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */; };
 		7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCFAA6926D1ADF400DC8FEB /* DevicePreview.swift */; };
@@ -69,6 +71,8 @@
 		7F3F68F926E84BB80055ABC7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationButton.swift; sourceTree = "<group>"; };
 		7F3F68FE26E853520055ABC7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
+		7F9AE2622729CFF400E42678 /* CalculationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationError.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		7FC0C92926D1E50500A55FB8 /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7FC0C92B26D1FC6700A55FB8 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
@@ -84,7 +88,7 @@
 		7FCFAA4226D1695F00DC8FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "roll-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roll_calculatorUITests.swift; sourceTree = "<group>"; };
+		7FCFAA5626D1695F00DC8FEB /* RollCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollCalculatorUITests.swift; sourceTree = "<group>"; };
 		7FCFAA6426D16A2E00DC8FEB /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
 		7FCFAA6626D16A3B00DC8FEB /* AccessibiltyTextPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibiltyTextPreview.swift; sourceTree = "<group>"; };
 		7FCFAA6926D1ADF400DC8FEB /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				7F3F22FD26E3C06B007DF0BC /* String.swift */,
 				7F3F68FE26E853520055ABC7 /* Color.swift */,
+				7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		7F3F230426E43E44007DF0BC /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				7F9AE2622729CFF400E42678 /* CalculationError.swift */,
 				7F3F230226E43E39007DF0BC /* RollError.swift */,
 			);
 			path = Errors;
@@ -238,7 +244,7 @@
 		7FCFAA5526D1695F00DC8FEB /* roll-calculatorUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7FCFAA5626D1695F00DC8FEB /* roll_calculatorUITests.swift */,
+				7FCFAA5626D1695F00DC8FEB /* RollCalculatorUITests.swift */,
 			);
 			path = "roll-calculatorUITests";
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 				7FC0C93026E1596A00A55FB8 /* RollLogView.swift in Sources */,
 				7FC0C92E26D2C84100A55FB8 /* Calculation.swift in Sources */,
 				7F3F68FD26E852B40055ABC7 /* ProfileNavigationButton.swift in Sources */,
+				7F9AE2612729CD0200E42678 /* InterfaceOrientation.swift in Sources */,
 				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
 				7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */,
 				7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */,
@@ -441,6 +448,7 @@
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
 				7F3F68FF26E853520055ABC7 /* Color.swift in Sources */,
+				7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */,
 				7FC0C93426E160DE00A55FB8 /* RollLogNavigationButton.swift in Sources */,
 				7FCFAA6C26D1B4C200DC8FEB /* OrientationPreview.swift in Sources */,
 				7FCFAA6E26D1C08000DC8FEB /* iOSDevice.swift in Sources */,
@@ -462,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCFAA5726D1695F00DC8FEB /* roll_calculatorUITests.swift in Sources */,
+				7FCFAA5726D1695F00DC8FEB /* RollCalculatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

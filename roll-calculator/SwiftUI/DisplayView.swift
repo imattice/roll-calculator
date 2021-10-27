@@ -9,16 +9,15 @@ import SwiftUI
 
 struct DisplayView: View {
     @EnvironmentObject var calculation: Calculation
-    
+
     var methodText: String {
-        if calculation.method != "" {
+        if calculation.method.isEmpty == false {
             return String(calculation.method)
-        }
-        else {
+        } else {
             return ""
         }
     }
-    
+
     var body: some View {
         HStack {
             Spacer()
@@ -37,10 +36,10 @@ struct DisplayView: View {
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct DisplayView_Previews: PreviewProvider {
-    @State static var calculation = Calculation(method: "1d10+5", result: "13")
-    
+    @State static var calculation: Calculation = Calculation(method: "1d10+5", result: "13")
+
     static var previews: some View {
         DisplayView()
             .environmentObject(calculation)

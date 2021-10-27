@@ -11,7 +11,7 @@ struct NumericButton: View {
     @EnvironmentObject var calculation: Calculation
 
     let value: String
-    
+
     var body: some View {
         KeyView(value)
             .foregroundColor(AppColor.KeyViews.Numeric.text)
@@ -20,18 +20,17 @@ struct NumericButton: View {
                 onTap()
             }
     }
-    
+
     init(_ value: String) {
         self.value = value
     }
-    
+
     func onTap() {
         calculation.method += value
     }
 }
 
-
-//MARK: - Previews
+// MARK: - Previews
 struct NumericButton_Previews: PreviewProvider {
     static let one: String = "1"
 

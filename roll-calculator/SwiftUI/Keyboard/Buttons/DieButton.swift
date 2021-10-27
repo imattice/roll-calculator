@@ -11,7 +11,7 @@ struct DieButton: View {
     @EnvironmentObject var calculation: Calculation
 
     let value: String
-    
+
     var body: some View {
         KeyView(value)
             .foregroundColor(AppColor.KeyViews.Die.text)
@@ -21,17 +21,17 @@ struct DieButton: View {
                 onTap()
             }
     }
-    
+
     init(_ value: String) {
         self.value = value
     }
-    
+
     func onTap() {
         calculation.method += value
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct DieButton_Previews: PreviewProvider {
     static let d4: String = "d4"
     static let d10: String = "d10"

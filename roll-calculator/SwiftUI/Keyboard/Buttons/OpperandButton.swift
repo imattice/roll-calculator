@@ -11,7 +11,7 @@ struct OpperandButton: View {
     @EnvironmentObject var calculation: Calculation
 
     let value: String
-    
+
     var body: some View {
         KeyView(value)
             .foregroundColor(AppColor.KeyViews.Opperand.text)
@@ -21,17 +21,17 @@ struct OpperandButton: View {
                 onTap()
             }
     }
-    
+
     init(_ value: String) {
         self.value = value
     }
-    
+
     func onTap() {
         calculation.method += value
     }
 }
 
-//MARK: - Previews
+// MARK: - Previews
 struct OpperandButton_Previews: PreviewProvider {
     static let plus: String = "+"
     static let minus: String = "-"

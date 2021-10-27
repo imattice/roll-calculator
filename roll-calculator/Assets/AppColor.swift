@@ -8,8 +8,6 @@
 import SwiftUI
 
 enum AppColor {
-    static let textPrimary: Color = .richBlack
-    
     enum KeyViews {
         enum Numeric {
             static let text: Color = .uranianBlue
@@ -27,16 +25,19 @@ enum AppColor {
             static let text: Color = .cordovanRed
             static let background: Color = .steelBlue
         }
+
         static let borderColor: Color = .richBlack
     }
-    
+
     enum DisplayView {
         static let background: Color = .queenBlue
         static let resultText: Color = .cordovanRed
         static let methodText: Color = .steelBlue
     }
-    
+
     enum NavigationButton {
         static let rollLog: Color = .richBlack
     }
+
+    static let textPrimary: Color = .richBlack
 }
