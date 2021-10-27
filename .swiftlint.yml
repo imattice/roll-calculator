@@ -90,6 +90,12 @@ colon:
 file_length:
   warning: 500
   error: 1200
+identifier_name:
+    excluded:
+        - id
+        - d4
+        - d6
+        - d8
 line_length:
     warning: 110
     error: 200
