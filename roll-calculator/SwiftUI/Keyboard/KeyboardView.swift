@@ -39,6 +39,7 @@ struct KeyboardView: View {
     // MARK: Spacing
     let buttonSpacing: CGFloat = 0
     var body: some View {
+        // swiftlint:disable closure_body_length
         GeometryReader { geo in
             VStack(spacing: buttonSpacing) {
                 HStack(spacing: buttonSpacing) {
@@ -79,6 +80,7 @@ struct KeyboardView: View {
                 }
             }
         }
+        // swiftlint:enable closure_body_length
     }
 }
 
