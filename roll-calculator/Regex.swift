@@ -9,14 +9,18 @@ import Foundation
 
 /// Options for regex patterns
 enum Regex {
-    /// The pattren for dice rolls; e.g. "10d20'
+    /// Matches the pattern for any die roll
     case dieRoll
+    /// The pattern for a specific die roll, excluding any enclosing parenthesis
+    case specificRoll(_ dieValue: Int)
 
     /// The stirng pattern for the selected regex option
     var pattern: String {
         switch self {
         case .dieRoll:
-            return #"\d+d\d+"#
+            return #"\b\d+d\d+\b"#
+        case .specificRoll(let dieValue):
+            return #"\b[(]?\d+d\#(dieValue)[)]?\b"#
         }
     }
 }

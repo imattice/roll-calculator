@@ -62,7 +62,6 @@ opt_in_rules:
 - operator_usage_whitespace
 - optional_enum_case_matching
 - overridden_super_call
-- pattern_matching_keywords
 - prefer_self_type_over_type_of_self
 - prefer_zero_over_explicit_init
 - private_action
@@ -97,7 +96,7 @@ identifier_name:
         - d6
         - d8
 line_length:
-    warning: 110
+    warning: 160
     error: 200
 nesting:
     type_level: 2

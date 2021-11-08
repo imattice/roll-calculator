@@ -22,9 +22,7 @@ class CalculationTests: XCTestCase {
             let evaluation: Result<Int, CalculationError> = test.0.calculate()
             switch evaluation {
             case .success(let result):
-                // swiftlint:disable line_length
                 XCTAssertEqual(result, test.result, "Expected evaluation of '\(evaluation)' did not match expected result '\(test.result)'")
-                // swiftlint:enable line_length
 
             case .failure(let error):
                 XCTFail("Evaluation returned a failure with error: \(error)")
@@ -42,9 +40,7 @@ class CalculationTests: XCTestCase {
         calculations.forEach { test in
             let replacedString: String = test.0.rollsReplaced(test.0.method)
 
-            // swiftlint:disable line_length
             XCTAssertTrue(replacedString.count <= test.maxStringLength, "'\(replacedString)' did not meet the expected length of \(test.maxStringLength)")
-            // swiftlint:enable line_length
         }
     }
 }
