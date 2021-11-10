@@ -85,4 +85,38 @@ class CalculationTests: XCTestCase {
             XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
         }
     }
+    func testUpdateWithParentheses() {
+        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
+            (Calculation(), .parentheses(value: .opening), "( "),
+            (Calculation(), .parentheses(value: .closing), "")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.calculation.update(testCase.update)
+
+            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+        }
+    }
+
+    func testUpdateWithSequence() {
+        let calculations: [(calculation: Calculation, updates: [ButtonValue], result: String)] = [
+            (Calculation(),
+             [
+                .parentheses(value: .opening),
+                .die(value: 4),
+                .parentheses(value: .closing)
+             ],
+             "( 1d4 )")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.updates.forEach { update in
+                testCase.calculation.update(update)
+            }
+
+            XCTAssertEqual(testCase.calculation.method,
+                           testCase.result,
+                           "Calculation method was not updated with sequence \(testCase.updates.description)")
+        }
+    }
 }

@@ -63,6 +63,34 @@ class Calculation: ObservableObject, Identifiable {
         // TODO: Implement method
     }
 
+    private func validateMethod() {
+        var processedMethod: String = method
+        // Method should not begin or end with whitespace
+        processedMethod = processedMethod.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // Method should not end with an Operand
+        if let lastCharacter: String.Element = processedMethod.last,
+            Operand.symbolStrings.contains(String(lastCharacter)) {
+            processedMethod.removeLast()
+        }
+    }
+
+    private func removeTrailingOperands(from string: String) -> String {
+        var processedString: String = string
+        if let lastCharacter: String.Element = string.last,
+            Operand.symbolStrings.contains(String(lastCharacter)) {
+            processedString.removeLast()
+            processedString = processedString.trimmingCharacters(in: .whitespacesAndNewlines)
+
+            return removeTrailingOperands(from: processedString)
+        }
+
+        return processedString
+    }
+}
+
+// MARK: - Update Methods
+extension Calculation {
     dynamic func update(_ value: ButtonValue) {
         switch value {
         case .die(let value):
@@ -73,6 +101,9 @@ class Calculation: ObservableObject, Identifiable {
 
         case .operand(let operand):
             update(with: operand)
+
+        case .parentheses(let parenthesisState):
+            update(with: parenthesisState)
         }
     }
 
@@ -120,28 +151,17 @@ class Calculation: ObservableObject, Identifiable {
         method += " \(operand.symbol) "
     }
 
-    private func validateMethod() {
-        var processedMethod: String = method
-        // Method should not begin or end with whitespace
-        processedMethod = processedMethod.trimmingCharacters(in: .whitespacesAndNewlines)
+    private func update(with parenthesisState: ParenthesisState) {
+        switch parenthesisState {
+        case .opening:
+            method += "\(parenthesisState.symbol) "
 
-        // Method should not end with an Operand
-        if let lastCharacter: String.Element = processedMethod.last,
-            Operand.symbolStrings.contains(String(lastCharacter)) {
-            processedMethod.removeLast()
+        case .closing:
+            // Ensure the method does not start with a closing parenthesis
+            guard method.isEmpty == false else { return }
+
+            method += " \(parenthesisState.symbol)"
         }
     }
 
-    private func removeTrailingOperands(from string: String) -> String {
-        var processedString: String = string
-        if let lastCharacter: String.Element = string.last,
-            Operand.symbolStrings.contains(String(lastCharacter)) {
-            processedString.removeLast()
-            processedString = processedString.trimmingCharacters(in: .whitespacesAndNewlines)
-
-            return removeTrailingOperands(from: processedString)
-        }
-
-        return processedString
-    }
 }
