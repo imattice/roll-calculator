@@ -18,8 +18,6 @@ class RegexTests: XCTestCase {
             ("this contains a 5d7 roll", "5d7"),
             ("This does not contain a roll", nil),
             ("(3d8) + 3", "3d8")
-
-            
         ]
 
         cases.forEach { testCase in
@@ -40,13 +38,13 @@ class RegexTests: XCTestCase {
     func testSpecificRollRegex() {
         let cases: [(test: String, dieValue: Int, result: String?)] = [
             ("1d4", 4, "1d4"),
-            ("(1d4)", 4, "1d4"),
+            ("(1d4)", 4, "(1d4)"),
             ("2d4", 4, "2d4"),
             ("1 d4", 4, nil),
             ("600000d1000000", 10, nil),
             ("this contains a 5d7 roll", 7, "5d7"),
             ("This does not contain a roll", 10, nil),
-            ("1 + (3d8) + 3", 8, "3d8")
+            ("1 + (3d8) + 3", 8, "(3d8)")
         ]
 
         cases.forEach { testCase in
