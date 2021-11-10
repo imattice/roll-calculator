@@ -11,7 +11,7 @@ import Foundation
 enum Regex {
     /// Matches the pattern for any die roll
     case dieRoll
-    /// The pattern for a specific die roll, excluding any enclosing parenthesis
+    /// The pattern for a specific die roll, including any enclosing parenthesis
     case specificRoll(_ dieValue: Int)
 
     /// The stirng pattern for the selected regex option
@@ -20,7 +20,10 @@ enum Regex {
         case .dieRoll:
             return #"\b\d+d\d+\b"#
         case .specificRoll(let dieValue):
-            return #"\b[(]?\d+d\#(dieValue)[)]?\b"#
+            // (?<=\s|^) lookback to match the start of the string or a space
+            // (?=\s|$) lookahead to match a space or the end of string
+            // [(]? captures the optional parenthesis
+            return #"(?<=\s|^)[(]?\d+d\#(dieValue)[)]?(?=\s|$)"#
         }
     }
 }
