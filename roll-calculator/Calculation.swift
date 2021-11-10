@@ -60,6 +60,30 @@ class Calculation: ObservableObject, Identifiable {
 
     /// Saves the calculation to the current RollLog
     func recordCalculation() {
-//        RollLog.shared.addCalculation(self)
+        // TODO: Implement method
+    }
+
+    dynamic func update(_ value: ButtonValue) {
+        switch value {
+        case .die(let value):
+            update(with: Roll(dieValue: value))
+        }
+    }
+
+    private func update(with roll: Roll) {
+        // Check if the roll already exists in the calculation method
+        // Check that the roll is not contained in parentheses
+        if let matchRange: Range = method.range(of: Regex.specificRoll(roll.dieValue).pattern, options: [.regularExpression]),
+           method[matchRange.lowerBound] != "(",
+           let existingRoll: Roll = try? Roll(fromString: String(method[matchRange])) {
+
+            method = method.replacingCharacters(in: matchRange, with: "\(existingRoll.count + 1)d\(existingRoll.dieValue)")
+
+            return
+
+        // If the roll does not exist, add a new one
+        } else {
+            method += "\(roll.count)d\(roll.dieValue)"
+        }
     }
 }
