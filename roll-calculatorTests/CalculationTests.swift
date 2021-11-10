@@ -61,7 +61,8 @@ class CalculationTests: XCTestCase {
     func testUpdateWithNumeral() {
         let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
             (Calculation(), .numeral(value: 1), "1"),
-            (Calculation(method: "6 + "), .numeral(value: 8), "6 + 8")
+            (Calculation(method: "6 + "), .numeral(value: 8), "6 + 8"),
+            (Calculation(method: "1d4"), .numeral(value: 10), "1d4 + 10")
         ]
 
         calculations.forEach { testCase in

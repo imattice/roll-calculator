@@ -94,6 +94,12 @@ class Calculation: ObservableObject, Identifiable {
     }
 
     private func update(with number: Int) {
+        // Check if the previous value was a die roll
+        let components: [Substring] = method.split(separator: " ")
+        if let lastComponent: Substring = components.last,
+           lastComponent.contains("d") {
+            update(with: .plus)
+        }
         method += String(number)
     }
 
