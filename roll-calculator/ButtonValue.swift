@@ -7,4 +7,5 @@
 
 enum ButtonValue {
     case die(value: Int)
+    case numeral(value: Int)
 }

@@ -44,11 +44,24 @@ class CalculationTests: XCTestCase {
         }
     }
 
-    func testUpdate() {
+    func testUpdateWithDie() {
         let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
             (Calculation(), .die(value: 4), "1d4"),
             (Calculation(method: "1d6"), .die(value: 6), "2d6"),
             (Calculation(method: "(3d12) + "), .die(value: 12), "(3d12) + 1d12")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.calculation.update(testCase.update)
+
+            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+        }
+    }
+
+    func testUpdateWithNumeral() {
+        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
+            (Calculation(), .numeral(value: 1), "1"),
+            (Calculation(method: "6 + "), .numeral(value: 8), "6 + 8")
         ]
 
         calculations.forEach { testCase in
