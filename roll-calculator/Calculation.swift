@@ -67,8 +67,12 @@ class Calculation: ObservableObject, Identifiable {
         switch value {
         case .die(let value):
             update(with: Roll(dieValue: value))
+
         case .numeral(let number):
             update(with: number)
+
+        case .operand(let operand):
+            update(with: operand)
         }
     }
 
@@ -91,5 +95,47 @@ class Calculation: ObservableObject, Identifiable {
 
     private func update(with number: Int) {
         method += String(number)
+    }
+
+    private func update(with operand: Operand) {
+        // Prevent a calculation from starting with an Operand
+        guard method.isEmpty == false else { return }
+
+        // Remove any trailing whitespace
+        method = method.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // Change method if last value in method is another Operand
+        if let lastCharacter: String.Element = method.last,
+            Operand.symbolStrings.contains(String(lastCharacter)) {
+            method.removeLast()
+            method = method.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+
+        method += " \(operand.symbol) "
+    }
+
+    private func validateMethod() {
+        var processedMethod: String = method
+        // Method should not begin or end with whitespace
+        processedMethod = processedMethod.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // Method should not end with an Operand
+        if let lastCharacter: String.Element = processedMethod.last,
+            Operand.symbolStrings.contains(String(lastCharacter)) {
+            processedMethod.removeLast()
+        }
+    }
+
+    private func removeTrailingOperands(from string: String) -> String {
+        var processedString: String = string
+        if let lastCharacter: String.Element = string.last,
+            Operand.symbolStrings.contains(String(lastCharacter)) {
+            processedString.removeLast()
+            processedString = processedString.trimmingCharacters(in: .whitespacesAndNewlines)
+
+            return removeTrailingOperands(from: processedString)
+        }
+
+        return processedString
     }
 }

@@ -8,4 +8,5 @@
 enum ButtonValue {
     case die(value: Int)
     case numeral(value: Int)
+    case operand(value: Operand)
 }

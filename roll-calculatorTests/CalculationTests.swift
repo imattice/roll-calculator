@@ -70,4 +70,18 @@ class CalculationTests: XCTestCase {
             XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
         }
     }
+
+    func testUpdateWithOperand() {
+        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
+            (Calculation(), .operand(value: .plus), ""),
+            (Calculation(method: "6"), .operand(value: .multiply), "6 * "),
+            (Calculation(method: "1 - "), .operand(value: .plus), "1 + ")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.calculation.update(testCase.update)
+
+            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+        }
+    }
 }

@@ -14,13 +14,14 @@
 		7F3F68EA26E839F20055ABC7 /* EvaluateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */; };
 		7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */; };
 		7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68ED26E83F040055ABC7 /* DieButton.swift */; };
-		7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */; };
+		7F3F68F026E83F0F0055ABC7 /* OperandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68EF26E83F0F0055ABC7 /* OperandButton.swift */; };
 		7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68F626E8497C0055ABC7 /* AppColor.swift */; };
 		7F3F68FA26E84BB80055ABC7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3F68F926E84BB80055ABC7 /* Colors.xcassets */; };
 		7F3F68FD26E852B40055ABC7 /* ProfileNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */; };
 		7F3F68FF26E853520055ABC7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3F68FE26E853520055ABC7 /* Color.swift */; };
 		7F7AAD56273837BF0034447F /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD55273837BF0034447F /* RegexTests.swift */; };
 		7F7AAD58273C172F0034447F /* ButtonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD57273C172F0034447F /* ButtonValue.swift */; };
+		7F7AAD5A273C40470034447F /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD59273C40470034447F /* Operand.swift */; };
 		7F9AE2612729CD0200E42678 /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */; };
 		7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2622729CFF400E42678 /* CalculationError.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
@@ -68,13 +69,14 @@
 		7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateButton.swift; sourceTree = "<group>"; };
 		7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericButton.swift; sourceTree = "<group>"; };
 		7F3F68ED26E83F040055ABC7 /* DieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieButton.swift; sourceTree = "<group>"; };
-		7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpperandButton.swift; sourceTree = "<group>"; };
+		7F3F68EF26E83F0F0055ABC7 /* OperandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperandButton.swift; sourceTree = "<group>"; };
 		7F3F68F626E8497C0055ABC7 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		7F3F68F926E84BB80055ABC7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7F3F68FC26E852B40055ABC7 /* ProfileNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationButton.swift; sourceTree = "<group>"; };
 		7F3F68FE26E853520055ABC7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7F7AAD55273837BF0034447F /* RegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
 		7F7AAD57273C172F0034447F /* ButtonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonValue.swift; sourceTree = "<group>"; };
+		7F7AAD59273C40470034447F /* Operand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operand.swift; sourceTree = "<group>"; };
 		7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
 		7F9AE2622729CFF400E42678 /* CalculationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationError.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 			children = (
 				7FC0C92926D1E50500A55FB8 /* KeyView.swift */,
 				7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */,
-				7F3F68EF26E83F0F0055ABC7 /* OpperandButton.swift */,
+				7F3F68EF26E83F0F0055ABC7 /* OperandButton.swift */,
 				7F3F68ED26E83F040055ABC7 /* DieButton.swift */,
 				7F3F68E926E839F20055ABC7 /* EvaluateButton.swift */,
 			);
@@ -218,6 +220,7 @@
 				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
 				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
 				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
+				7F7AAD59273C40470034447F /* Operand.swift */,
 				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
 				7F3F230026E3C0F6007DF0BC /* Regex.swift */,
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
@@ -446,13 +449,14 @@
 				7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */,
 				7F3F68EA26E839F20055ABC7 /* EvaluateButton.swift in Sources */,
 				7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */,
-				7F3F68F026E83F0F0055ABC7 /* OpperandButton.swift in Sources */,
+				7F3F68F026E83F0F0055ABC7 /* OperandButton.swift in Sources */,
 				7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */,
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
 				7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
+				7F7AAD5A273C40470034447F /* Operand.swift in Sources */,
 				7F3F68FF26E853520055ABC7 /* Color.swift in Sources */,
 				7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */,
 				7F7AAD58273C172F0034447F /* ButtonValue.swift in Sources */,

@@ -11,7 +11,6 @@ opt_in_rules:
 - closure_end_indentation
 - closure_spacing
 - collection_alignment
-- conditional_returns_on_newline
 - contains_over_filter_count
 - contains_over_filter_is_empty
 - contains_over_first_not_nil
@@ -39,7 +38,6 @@ opt_in_rules:
 - first_where
 - flatmap_over_map_reduce
 - force_unwrapping
-- function_default_parameter_at_end
 - identical_operands
 - implicit_return
 - implicitly_unwrapped_optional
