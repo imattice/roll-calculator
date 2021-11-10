@@ -17,7 +17,7 @@ enum AppColor {
             static let text: Color = .arylideYellow
             static let background: Color = .steelBlue
         }
-        enum Opperand {
+        enum Operand {
             static let text: Color = .cordovanRed
             static let background: Color = .steelBlue
         }

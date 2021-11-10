@@ -58,25 +58,25 @@ struct KeyboardView: View {
                     NumericButton(sevenText)
                     NumericButton(eightText)
                     NumericButton(nineText)
-                    OpperandButton(divideText)
+                    OperandButton(divideText)
                 }
                 HStack(spacing: buttonSpacing) {
                     NumericButton(fourText)
                     NumericButton(fiveText)
                     NumericButton(sixText)
-                    OpperandButton(multiplyText)
+                    OperandButton(multiplyText)
                 }
                 HStack(spacing: buttonSpacing) {
                     NumericButton(oneText)
                     NumericButton(twoText)
                     NumericButton(threeText)
-                    OpperandButton(minusText)
+                    OperandButton(minusText)
                 }
                 HStack(spacing: buttonSpacing) {
                     NumericButton(zeroText)
                     EvaluateButton()
                         .frame(width: geo.size.width * 0.5)
-                    OpperandButton(plusText)
+                    OperandButton(plusText)
                 }
             }
         }
