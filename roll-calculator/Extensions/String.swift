@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     /// Checks that the string matches the given regex pattern
-    func matches(_ regex: String) -> Bool {
-        self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    func matches(_ regex: Regex) -> Bool {
+        self.range(of: regex.pattern, options: .regularExpression, range: nil, locale: nil) != nil
     }
 }

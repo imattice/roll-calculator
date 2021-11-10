@@ -16,9 +16,15 @@ struct Roll {
     /// The sum of all calculated rolls
     var result: Int { results.reduce(0, +) }
 
+    /// Standard initializer using direct properties
+    init(count: Int = 1, dieValue: Int) {
+        self.count = count
+        self.dieValue = dieValue
+    }
+
     /// Create a roll from a string that follows the standard die pattern
     init(fromString string: String) throws {
-        guard string.matches(Regex.dieRoll.pattern) else {
+        guard string.matches(Regex.dieRoll) else {
             throw RollError.invalidString
         }
 
