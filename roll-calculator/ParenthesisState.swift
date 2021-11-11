@@ -18,3 +18,10 @@ enum ParenthesisState {
         }
     }
 }
+
+extension ParenthesisState {
+    static let symbolStrings: [String] = [
+        ParenthesisState.opening.symbol,
+        ParenthesisState.closing.symbol
+    ]
+}

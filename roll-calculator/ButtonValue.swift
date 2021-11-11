@@ -10,4 +10,6 @@ enum ButtonValue {
     case numeral(value: Int)
     case operand(value: Operand)
     case parentheses(value: ParenthesisState)
+    case backspace
+    case clear
 }

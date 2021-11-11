@@ -104,6 +104,12 @@ extension Calculation {
 
         case .parentheses(let parenthesisState):
             update(with: parenthesisState)
+
+        case .backspace:
+            backspace()
+
+        case .clear:
+            clear()
         }
     }
 
@@ -164,4 +170,34 @@ extension Calculation {
         }
     }
 
+    private func backspace() {
+        // Break the method into components and get the last component
+        let components: [Substring] = method.split(separator: " ")
+        guard let lastComponent = components.last else { return }
+
+        // Check if the last component was an operand
+        if Operand.symbolStrings.contains(String(lastComponent)) {
+            method.removeLast(3)
+            return
+        }
+
+        // Check if the last component was a parenthesis
+        else if ParenthesisState.symbolStrings.contains(String(lastComponent)){
+            method.removeLast(2)
+            return
+        }
+
+        // Check if the last component was a die roll
+        else if lastComponent.contains("d") {
+            method.removeLast(lastComponent.count)
+            return
+        }
+
+        // In all other cases, remove the last value
+        method.removeLast()
+    }
+
+    private func clear() {
+        method.removeAll()
+    }
 }

@@ -98,6 +98,41 @@ class CalculationTests: XCTestCase {
         }
     }
 
+    func testBackspace() {
+        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
+            (Calculation(), .backspace, ""),
+            (Calculation(method: "1 + 1"), .backspace, "1 + "),
+            (Calculation(method: "1 + "), .backspace, "1"),
+            (Calculation(method: "( "), .backspace, ""),
+            (Calculation(method: "14d100"), .backspace, ""),
+            (Calculation(method: "7 + 1d4"), .backspace, "7 + "),
+            (Calculation(method: "( 8 )"), .backspace, "( 8")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.calculation.update(testCase.update)
+
+            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+        }
+    }
+
+    func testClear() {
+        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
+            (Calculation(), .clear, ""),
+            (Calculation(method: "1 + 1"), .clear, ""),
+            (Calculation(method: "1 + "), .clear, ""),
+            (Calculation(method: "( "), .clear, ""),
+            (Calculation(method: "7 + 1d4"), .clear, ""),
+            (Calculation(method: "( 8 )"), .clear, "")
+        ]
+
+        calculations.forEach { testCase in
+            testCase.calculation.update(testCase.update)
+
+            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+        }
+    }
+
     func testUpdateWithSequence() {
         let calculations: [(calculation: Calculation, updates: [ButtonValue], result: String)] = [
             (Calculation(),
