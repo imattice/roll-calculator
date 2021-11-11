@@ -11,7 +11,7 @@ import Foundation
 struct RollLog {
     /// A shared instance of the app's roll log
     static var shared: RollLog = RollLog()
-    /// The calculations recorded for the curernt session
+    /// The calculations recorded for the current session
     var calculations: [Calculation] = [Calculation]()
     /// Add a new calculation to the calculation history
     mutating func addCalculation(_ calc: Calculation) {

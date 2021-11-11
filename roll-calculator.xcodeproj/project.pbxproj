@@ -196,6 +196,18 @@
 			path = NavigationButtons;
 			sourceTree = "<group>";
 		};
+		7F7AAD5D273CB9730034447F /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
+				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
+				7F7AAD5B273C83110034447F /* ParenthesisState.swift */,
+				7F7AAD59273C40470034447F /* Operand.swift */,
+				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
+			);
+			path = Calculation;
+			sourceTree = "<group>";
+		};
 		7FCFAA2F26D1695E00DC8FEB = {
 			isa = PBXGroup;
 			children = (
@@ -220,13 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
-				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
-				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
-				7F7AAD5B273C83110034447F /* ParenthesisState.swift */,
-				7F7AAD59273C40470034447F /* Operand.swift */,
-				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
-				7F3F230026E3C0F6007DF0BC /* Regex.swift */,
+				7F7AAD5D273CB9730034447F /* Calculation */,
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
+				7F3F230026E3C0F6007DF0BC /* Regex.swift */,
 				7F3F230426E43E44007DF0BC /* Errors */,
 				7F3F22FF26E3C074007DF0BC /* Extensions */,
 				7F3F68F826E849910055ABC7 /* Assets */,

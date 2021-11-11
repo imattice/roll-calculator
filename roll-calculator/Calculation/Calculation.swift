@@ -63,6 +63,7 @@ class Calculation: ObservableObject, Identifiable {
         // TODO: Implement method
     }
 
+    /// Removes user input errors from the current method
     private func validateMethod() {
         var processedMethod: String = method
         // Method should not begin or end with whitespace
@@ -75,6 +76,7 @@ class Calculation: ObservableObject, Identifiable {
         }
     }
 
+    /// Removes operands from the end of the current method
     private func removeTrailingOperands(from string: String) -> String {
         var processedString: String = string
         if let lastCharacter: String.Element = string.last,
@@ -91,6 +93,7 @@ class Calculation: ObservableObject, Identifiable {
 
 // MARK: - Update Methods
 extension Calculation {
+    /// Updates the method using the specified button value
     dynamic func update(_ value: ButtonValue) {
         switch value {
         case .die(let value):
@@ -113,6 +116,7 @@ extension Calculation {
         }
     }
 
+    /// Updates the method with a specific roll
     private func update(with roll: Roll) {
         // Check if the roll already exists in the calculation method
         // Check that the roll is not contained in parentheses
@@ -130,6 +134,7 @@ extension Calculation {
         }
     }
 
+    /// Updates the method with a specific number
     private func update(with number: Int) {
         // Check if the previous value was a die roll
         let components: [Substring] = method.split(separator: " ")
@@ -140,6 +145,7 @@ extension Calculation {
         method += String(number)
     }
 
+    /// Updates the method with a specific operand
     private func update(with operand: Operand) {
         // Prevent a calculation from starting with an Operand
         guard method.isEmpty == false else { return }
@@ -157,6 +163,7 @@ extension Calculation {
         method += " \(operand.symbol) "
     }
 
+    /// Updates the method with a parenthesis state
     private func update(with parenthesisState: ParenthesisState) {
         switch parenthesisState {
         case .opening:
@@ -170,6 +177,7 @@ extension Calculation {
         }
     }
 
+    /// Removes the last component
     private func backspace() {
         // Break the method into components and get the last component
         let components: [Substring] = method.split(separator: " ")
@@ -197,6 +205,7 @@ extension Calculation {
         method.removeLast()
     }
 
+    /// Resets the method to an empty string
     private func clear() {
         method.removeAll()
     }
