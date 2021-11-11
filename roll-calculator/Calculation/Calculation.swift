@@ -71,7 +71,7 @@ class Calculation: ObservableObject, Identifiable {
 
         // Method should not end with an Operand
         if let lastCharacter: String.Element = processedMethod.last,
-            Operand.symbolStrings.contains(String(lastCharacter)) {
+           Operand.symbolStrings.contains(String(lastCharacter)) {
             processedMethod.removeLast()
         }
     }
@@ -80,7 +80,7 @@ class Calculation: ObservableObject, Identifiable {
     private func removeTrailingOperands(from string: String) -> String {
         var processedString: String = string
         if let lastCharacter: String.Element = string.last,
-            Operand.symbolStrings.contains(String(lastCharacter)) {
+           Operand.symbolStrings.contains(String(lastCharacter)) {
             processedString.removeLast()
             processedString = processedString.trimmingCharacters(in: .whitespacesAndNewlines)
 
@@ -91,122 +91,98 @@ class Calculation: ObservableObject, Identifiable {
     }
 }
 
-// MARK: - Update Methods
+// MARK: - Method
 extension Calculation {
-    /// Updates the method using the specified button value
-    dynamic func update(_ value: ButtonValue) {
-        switch value {
-        case .die(let value):
-            update(with: Roll(dieValue: value))
+    class Method {
+        @Published var components: [Calculation.Component]
 
-        case .numeral(let number):
-            update(with: number)
+        var displayString: String {
+            components.map { $0.displayString }.joined(separator: " ")
+        }
 
-        case .operand(let operand):
-            update(with: operand)
+        init(components: [Calculation.Component] = [Calculation.Component]()) {
+            self.components = components
+        }
 
-        case .parentheses(let parenthesisState):
-            update(with: parenthesisState)
+        func update(with component: Calculation.Component) {
+            // Combine any existing standard die not in parenthesis
+            /* swiftlint:disable explicit_type_interface */
+            // check that the entered component is a die roll
+            if case .standardDie(let inputCount, let inputValue) = component,
+               // check if there is a match in the components
+               let matchIndex: Int = components.indexForSpecificDie(dieValue: inputValue),
+               // get values for the existing die associated values
+               case .standardDie(let existingCount, let existingValue) = components[matchIndex],
+               // check if the matched index is in parentheses
+               isContainedInParentheses(componentIndex: matchIndex) == false {
+                components[matchIndex] = .standardDie(count: existingCount + inputCount, value: existingValue)
+                return
+            }
+            /* swiftlint:enable explicit_type_interface */
 
-        case .backspace:
-            backspace()
+            components.append(component)
+        }
 
-        case .clear:
-            clear()
+        func backspace() {
+            components.removeLast()
+        }
+
+        func clear() {
+            components.removeAll()
+        }
+
+        func isContainedInParentheses(componentIndex: Int) -> Bool {
+            let openingParentheses: [Calculation.Component] =
+            components[0...componentIndex].filter {
+                if case .parentheses(value: .opening) = $0 {
+                    return true
+                }
+                return false
+            }
+
+            let closingParentheses: [Calculation.Component] =
+            components[0...componentIndex].filter {
+                if case .parentheses(value: .closing) = $0 {
+                    return true
+                }
+                return false
+            }
+
+            return openingParentheses.count > closingParentheses.count
         }
     }
+}
 
-    /// Updates the method with a specific roll
-    private func update(with roll: Roll) {
-        // Check if the roll already exists in the calculation method
-        // Check that the roll is not contained in parentheses
-        if let matchRange: Range = method.range(of: Regex.specificRoll(roll.dieValue).pattern, options: [.regularExpression]),
-           method[matchRange.lowerBound] != "(",
-           let existingRoll: Roll = try? Roll(fromString: String(method[matchRange])) {
-            method = method.replacingCharacters(in: matchRange, with: "\(existingRoll.count + 1)d\(existingRoll.dieValue)")
+// MARK: - Component
+extension Calculation {
+    /// An enum representing the different components for a calculation method
+    enum Component: Equatable {
+        /// Case for a standard die
+        case standardDie(count: Int = 1, value: Int)
+        /// Case for a die with a custom value
+        case customDie(count: Int, value: Int)
+        /// Case for a numeric value
+        case numeral(value: Int)
+        /// Case for an operand
+        case operand(value: Operand)
+        /// Case for a parenthesis
+        case parentheses(value: ParenthesisState)
 
-            return
+        /// The string used to represent the component
+        var displayString: String {
+            switch self {
+            case .standardDie(let count, let value), .customDie(let count, let value):
+                return "\(count)d\(value)"
+
+            case .numeral(value: let value):
+                return String(value)
+
+            case .operand(value: let value):
+                return value.displaySymbol
+
+            case .parentheses(value: let value):
+                return value.symbol
+            }
         }
-
-        // If the roll does not exist, add a new one
-        else {
-            method += "\(roll.count)d\(roll.dieValue)"
-        }
-    }
-
-    /// Updates the method with a specific number
-    private func update(with number: Int) {
-        // Check if the previous value was a die roll
-        let components: [Substring] = method.split(separator: " ")
-        if let lastComponent: Substring = components.last,
-           lastComponent.contains("d") {
-            update(with: .plus)
-        }
-        method += String(number)
-    }
-
-    /// Updates the method with a specific operand
-    private func update(with operand: Operand) {
-        // Prevent a calculation from starting with an Operand
-        guard method.isEmpty == false else { return }
-
-        // Remove any trailing whitespace
-        method = method.trimmingCharacters(in: .whitespacesAndNewlines)
-
-        // Change method if last value in method is another Operand
-        if let lastCharacter: String.Element = method.last,
-            Operand.symbolStrings.contains(String(lastCharacter)) {
-            method.removeLast()
-            method = method.trimmingCharacters(in: .whitespacesAndNewlines)
-        }
-
-        method += " \(operand.symbol) "
-    }
-
-    /// Updates the method with a parenthesis state
-    private func update(with parenthesisState: ParenthesisState) {
-        switch parenthesisState {
-        case .opening:
-            method += "\(parenthesisState.symbol) "
-
-        case .closing:
-            // Ensure the method does not start with a closing parenthesis
-            guard method.isEmpty == false else { return }
-
-            method += " \(parenthesisState.symbol)"
-        }
-    }
-
-    /// Removes the last component
-    private func backspace() {
-        // Break the method into components and get the last component
-        let components: [Substring] = method.split(separator: " ")
-        guard let lastComponent = components.last else { return }
-
-        // Check if the last component was an operand
-        if Operand.symbolStrings.contains(String(lastComponent)) {
-            method.removeLast(3)
-            return
-        }
-
-        // Check if the last component was a parenthesis
-        else if ParenthesisState.symbolStrings.contains(String(lastComponent)){
-            method.removeLast(2)
-            return
-        }
-
-        // Check if the last component was a die roll
-        else if lastComponent.contains("d") {
-            method.removeLast(lastComponent.count)
-            return
-        }
-
-        // In all other cases, remove the last value
-        method.removeLast()
-    }
-
-    /// Resets the method to an empty string
-    private func clear() {
-        method.removeAll()
     }
 }

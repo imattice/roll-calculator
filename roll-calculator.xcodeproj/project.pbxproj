@@ -23,8 +23,6 @@
 		7F7AAD58273C172F0034447F /* ButtonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD57273C172F0034447F /* ButtonValue.swift */; };
 		7F7AAD5A273C40470034447F /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD59273C40470034447F /* Operand.swift */; };
 		7F7AAD5C273C83110034447F /* ParenthesisState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD5B273C83110034447F /* ParenthesisState.swift */; };
-		7F7AAD5F273CBC4C0034447F /* CalculationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD5E273CBC4C0034447F /* CalculationMethod.swift */; };
-		7F7AAD61273CC02E0034447F /* CalculationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD60273CC02E0034447F /* CalculationComponent.swift */; };
 		7F7AAD63273CC79B0034447F /* CalculationMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD62273CC79B0034447F /* CalculationMethodTests.swift */; };
 		7F7AAD65273CE10D0034447F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD64273CE10D0034447F /* Array.swift */; };
 		7F9AE2612729CD0200E42678 /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */; };
@@ -83,8 +81,6 @@
 		7F7AAD57273C172F0034447F /* ButtonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonValue.swift; sourceTree = "<group>"; };
 		7F7AAD59273C40470034447F /* Operand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operand.swift; sourceTree = "<group>"; };
 		7F7AAD5B273C83110034447F /* ParenthesisState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParenthesisState.swift; sourceTree = "<group>"; };
-		7F7AAD5E273CBC4C0034447F /* CalculationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethod.swift; sourceTree = "<group>"; };
-		7F7AAD60273CC02E0034447F /* CalculationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationComponent.swift; sourceTree = "<group>"; };
 		7F7AAD62273CC79B0034447F /* CalculationMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTests.swift; sourceTree = "<group>"; };
 		7F7AAD64273CE10D0034447F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
@@ -208,13 +204,11 @@
 		7F7AAD5D273CB9730034447F /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
-				7F7AAD60273CC02E0034447F /* CalculationComponent.swift */,
 				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
 				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
 				7F7AAD5B273C83110034447F /* ParenthesisState.swift */,
 				7F7AAD59273C40470034447F /* Operand.swift */,
 				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
-				7F7AAD5E273CBC4C0034447F /* CalculationMethod.swift */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
@@ -477,14 +471,12 @@
 				7F3F68EC26E83EFB0055ABC7 /* NumericButton.swift in Sources */,
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
 				7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */,
-				7F7AAD5F273CBC4C0034447F /* CalculationMethod.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
 				7F7AAD5A273C40470034447F /* Operand.swift in Sources */,
 				7F3F68FF26E853520055ABC7 /* Color.swift in Sources */,
 				7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */,
-				7F7AAD61273CC02E0034447F /* CalculationComponent.swift in Sources */,
 				7F7AAD58273C172F0034447F /* ButtonValue.swift in Sources */,
 				7FC0C93426E160DE00A55FB8 /* RollLogNavigationButton.swift in Sources */,
 				7F7AAD5C273C83110034447F /* ParenthesisState.swift in Sources */,
