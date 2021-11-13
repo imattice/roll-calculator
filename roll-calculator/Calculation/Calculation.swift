@@ -13,31 +13,38 @@ class Calculation: ObservableObject, Identifiable {
     /// A unique identifier for the calculation
     let id: String = UUID().uuidString
     /// The calculated result for the calculation
-    @Published var result: String
+    @Published var result: CalculationResult?
     /// The method that creates a result
     @Published var method: Method
 
-    var description: String { "You rolled a \(result)!" }
-
-    init(method: Method = Method(), result: String = "") {
-        self.result = result
+    init(method: Method = Method()) {
         self.method = method
     }
 
     /// Calculate a new result for
     @discardableResult
     func calculate() -> Result<Int, CalculationError> {
-        let rollsReplaced: String = rollsReplaced(method.calculationString)
-        let expression: NSExpression = NSExpression(format: rollsReplaced)
+        method.cleanUp()
 
+        // Roll the die
+        let rollsReplaced: String = rollsReplaced(method.calculationString)
+
+        // Prepare the string for calculation
+        let calculationString: String = rollsReplaced
+            .replacingOccurrences(of: "[", with: "(")
+            .replacingOccurrences(of: "]", with: ")")
+
+        // Calculate the string
+        let expression: NSExpression = NSExpression(format: calculationString)
         guard let result = expression.expressionValue(with: nil, context: nil) as? Int else {
             return .failure(.invalidCalculation)
         }
 
-        self.result = String(result)
-        recordCalculation()
+        // Create and set the result
+        let calculationResult: CalculationResult = CalculationResult(value: result, method: rollsReplaced)
+        self.result = calculationResult
 
-        //        method = rollsReplaced
+        recordCalculation()
 
         return .success(result)
     }
@@ -52,8 +59,9 @@ class Calculation: ObservableObject, Identifiable {
             return text
         }
 
-        let result: Int = roll.calculate()
-        let replacedText: String = text.replacingCharacters(in: matchRange, with: String(result))
+        roll.calculate()
+        let rollResults: String = "[\(roll.results.map { String($0) }.joined(separator: " + "))]"
+        let replacedText: String = text.replacingCharacters(in: matchRange, with: rollResults)
 
         return rollsReplaced(replacedText)
     }
@@ -288,13 +296,16 @@ extension Calculation {
             components[lastIndex] = component
         }
 
-        /// Removes user input errors from the current method
-        private func validateMethod() {
+        /// Attempts to remove user input errors from the current method
+        func cleanUp() {
             // Method should not end with an Operand
             if let lastComponent: Calculation.Component = components.last,
                case .operand = lastComponent {
                 components.removeLast()
             }
+
+            // Close all parentheses
+            // TODO: Implement Method
         }
 
         /// Removes operands from the end of the current method
@@ -357,11 +368,13 @@ extension Calculation {
     }
 }
 
-//extension Calculation {
-//    class Result {
-//        var value: Int
-//
-//        var rolledMethod: String
-//        var method: String
-//    }
-//}
+// MARK: - Result
+extension Calculation {
+    // TODO: Find better name; Result has a namespace collision
+    struct CalculationResult {
+        /// The  calculated value of the method
+        var value: Int
+        /// A description of the method with the rolled results
+        var method: String
+    }
+}

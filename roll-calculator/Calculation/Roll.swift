@@ -56,14 +56,12 @@ struct Roll: Equatable {
     }
 
     /// Calculates random numbers and fills the results with those results
-    mutating func calculate() -> Int {
+    mutating func calculate() {
         results = [Int]()
 
         for _ in 1...count {
             let result: Int = Int.random(in: 1...dieValue)
             results.append(result)
         }
-
-        return result
     }
 }

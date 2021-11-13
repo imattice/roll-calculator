@@ -36,7 +36,7 @@ struct CalculatorView_Previews: PreviewProvider {
         .standardDie(roll: Roll(count: 3, dieValue: 8)),
         .operand(value: .add),
         .numeral(value: 4)
-    ]), result: "24")
+    ]))
 
     static var previews: some View {
         CalculatorView()

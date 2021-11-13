@@ -12,7 +12,7 @@ struct RollLogView: View {
 
     var body: some View {
         List(rollLog.calculations) { calc in
-            Text(calc.description)
+            Text("You rolled a \(calc.result?.value ?? 0)!")
         }
     }
 
@@ -27,22 +27,19 @@ struct RollLogView_Previews: PreviewProvider {
             method: Calculation.Method(
                 components: [
                     .standardDie(roll: Roll(dieValue: 4))
-                ]),
-            result: "4"),
+                ])),
         Calculation(
             method: Calculation.Method(
                 components: [
                     .numeral(value: 1),
                     .operand(value: .add),
                     .standardDie(roll: Roll(count: 1, dieValue: 6))
-                ]),
-            result: "5"),
+                ])),
         Calculation(
             method: Calculation.Method(
                 components: [
                     .standardDie(roll: Roll(dieValue: 100))
-                ]),
-            result: "100")
+                ]))
     ])
 
     static var previews: some View {

@@ -22,7 +22,7 @@ struct DisplayView: View {
         HStack {
             Spacer()
             VStack(alignment: .trailing) {
-                Text(calculation.result)
+                Text(String(calculation.result?.value ?? 0))
                     .font(.largeTitle)
                     .foregroundColor(AppColor.DisplayView.resultText)
                 Text(methodText)
@@ -45,8 +45,7 @@ struct DisplayView_Previews: PreviewProvider {
                 .standardDie(roll: Roll(count: 1, dieValue: 10)),
                 .operand(value: .add),
                 .numeral(value: 5)
-            ]),
-        result: "13")
+            ]))
 
     static var previews: some View {
         DisplayView()

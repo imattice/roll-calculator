@@ -168,6 +168,7 @@
 		7F3F68F226E83F470055ABC7 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
 				7FC0C92926D1E50500A55FB8 /* KeyView.swift */,
 				7F3F68EB26E83EFB0055ABC7 /* NumericButton.swift */,
 				7F3F68EF26E83F0F0055ABC7 /* OperandButton.swift */,
@@ -207,11 +208,10 @@
 		7F7AAD5D273CB9730034447F /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
+				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
 				7F3F22FB26E3BDFD007DF0BC /* Roll.swift */,
-				7F7AAD57273C172F0034447F /* ButtonValue.swift */,
 				7F7AAD5B273C83110034447F /* ParenthesisState.swift */,
 				7F7AAD59273C40470034447F /* Operand.swift */,
-				7FC0C92D26D2C84100A55FB8 /* Calculation.swift */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
