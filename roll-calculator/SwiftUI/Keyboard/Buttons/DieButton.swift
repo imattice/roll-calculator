@@ -27,7 +27,7 @@ struct DieButton: View {
     }
 
     func onTap() {
-        calculation.method += value
+//        calculation.method += value
     }
 }
 

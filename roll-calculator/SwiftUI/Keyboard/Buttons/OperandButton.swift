@@ -27,7 +27,7 @@ struct OperandButton: View {
     }
 
     func onTap() {
-        calculation.method += value
+//        calculation.method += value
     }
 }
 
