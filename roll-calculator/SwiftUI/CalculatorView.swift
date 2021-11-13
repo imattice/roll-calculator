@@ -31,7 +31,12 @@ struct CalculatorView: View {
 
 // MARK: - Previews
 struct CalculatorView_Previews: PreviewProvider {
-    @State static var calculation: Calculation = Calculation(method: "3d8+4", result: "24")
+    @State static var calculation: Calculation =
+    Calculation(method: Calculation.Method(components: [
+        .standardDie(roll: Roll(count: 3, dieValue: 8)),
+        .operand(value: .add),
+        .numeral(value: 4)
+    ]), result: "24")
 
     static var previews: some View {
         CalculatorView()

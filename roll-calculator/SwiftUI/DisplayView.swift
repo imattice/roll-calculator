@@ -11,8 +11,8 @@ struct DisplayView: View {
     @EnvironmentObject var calculation: Calculation
 
     var methodText: String {
-        if calculation.method.isEmpty == false {
-            return String(calculation.method)
+        if calculation.method.components.isEmpty == false {
+            return calculation.method.displayString
         } else {
             return ""
         }
@@ -38,7 +38,15 @@ struct DisplayView: View {
 
 // MARK: - Previews
 struct DisplayView_Previews: PreviewProvider {
-    @State static var calculation: Calculation = Calculation(method: "1d10+5", result: "13")
+    @State static var calculation: Calculation =
+    Calculation(
+        method: Calculation.Method(
+            components: [
+                .standardDie(roll: Roll(count: 1, dieValue: 10)),
+                .operand(value: .add),
+                .numeral(value: 5)
+            ]),
+        result: "13")
 
     static var previews: some View {
         DisplayView()

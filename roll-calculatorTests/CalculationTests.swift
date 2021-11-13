@@ -12,10 +12,50 @@ import XCTest
 class CalculationTests: XCTestCase {
     func testBasicCalculation() {
         let calculations: [(calculation: Calculation, result: Int)] = [
-            (Calculation(method: "1+1"), 2),
-            (Calculation(method: "1-1"), 0),
-            (Calculation(method: "2*2"), 4),
-            (Calculation(method: "9/3"), 3)
+            (calculation:
+                Calculation(
+                    method: Calculation.Method(
+                        components: [
+                            .numeral(value: 1),
+                            .operand(value: .add),
+                            .numeral(value: 1)
+                        ]
+                    )
+                ),
+             result: 2),
+            (calculation:
+                Calculation(
+                    method: Calculation.Method(
+                        components: [
+                            .numeral(value: 1),
+                            .operand(value: .subtract),
+                            .numeral(value: 1)
+                        ]
+                    )
+                ),
+             result: 0),
+            (calculation:
+                Calculation(
+                    method: Calculation.Method(
+                        components: [
+                            .numeral(value: 2),
+                            .operand(value: .multiply),
+                            .numeral(value: 2)
+                        ]
+                    )
+                ),
+             result: 4),
+            (calculation:
+                Calculation(
+                    method: Calculation.Method(
+                        components: [
+                            .numeral(value: 9),
+                            .operand(value: .divide),
+                            .numeral(value: 3)
+                        ]
+                    )
+                ),
+             result: 3)
         ]
 
         calculations.forEach { test in
@@ -31,114 +71,53 @@ class CalculationTests: XCTestCase {
     }
 
     func testRollsReplaced() {
-        let calculations: [(calculation: Calculation, maxStringLength: Int)] = [
-            (Calculation(method: "1d4"), 1),
-            (Calculation(method: "1+3d6"), 5),
-            (Calculation(method: "1d4+3d6+100d100+4+7d20"), 16)
+        let calculations: [Calculation] = [
+            Calculation(
+                method: Calculation.Method(
+                    components: [
+                        .standardDie(roll: Roll( dieValue: 4))
+                    ]
+                )
+            ),
+            Calculation(
+                method: Calculation.Method(
+                    components: [
+                        .numeral(value: 1),
+                        .operand(value: .add),
+                        .standardDie(roll: Roll(count: 3, dieValue: 6))
+                    ]
+                )
+            ),
+            Calculation(
+                method: Calculation.Method(
+                    components: [
+                        .parentheses(value: .opening),
+                        .standardDie(roll: Roll(dieValue: 4)),
+                        .operand(value: .add),
+                        .standardDie(roll: Roll(count: 3, dieValue: 6)),
+                        .parentheses(value: .closing),
+                        .operand(value: .add),
+                        .standardDie(roll: Roll(count: 100, dieValue: 100)),
+                        .operand(value: .add),
+                        .standardDie(roll: Roll(count: 14, dieValue: 20))
+                    ]
+                )
+            )
         ]
 
         calculations.forEach { test in
-            let replacedString: String = test.calculation.rollsReplaced(test.calculation.method)
+            let replacedString: String = test.rollsReplaced(test.method.displayString)
 
-            XCTAssertTrue(replacedString.count <= test.maxStringLength, "'\(replacedString)' did not meet the expected length of \(test.maxStringLength)")
-        }
-    }
-
-    func testUpdateWithDie() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .die(value: 4), "1d4"),
-            (Calculation(method: "1d6"), .die(value: 6), "2d6"),
-            (Calculation(method: "(3d12) + "), .die(value: 12), "(3d12) + 1d12")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
-        }
-    }
-
-    func testUpdateWithNumeral() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .numeral(value: 1), "1"),
-            (Calculation(method: "6 + "), .numeral(value: 8), "6 + 8"),
-            (Calculation(method: "1d4"), .numeral(value: 10), "1d4 + 10")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
-        }
-    }
-
-    func testUpdateWithOperand() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .operand(value: .plus), ""),
-            (Calculation(method: "6"), .operand(value: .multiply), "6 * "),
-            (Calculation(method: "1 - "), .operand(value: .plus), "1 + ")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
-        }
-    }
-    func testUpdateWithParentheses() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .parentheses(value: .opening), "( "),
-            (Calculation(), .parentheses(value: .closing), "")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
-        }
-    }
-
-    func testBackspace() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .backspace, ""),
-            (Calculation(method: "1 + 1"), .backspace, "1 + "),
-            (Calculation(method: "1 + "), .backspace, "1"),
-            (Calculation(method: "( "), .backspace, ""),
-            (Calculation(method: "14d100"), .backspace, ""),
-            (Calculation(method: "7 + 1d4"), .backspace, "7 + "),
-            (Calculation(method: "( 8 )"), .backspace, "( 8")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
-        }
-    }
-
-    func testClear() {
-        let calculations: [(calculation: Calculation, update: ButtonValue, result: String)] = [
-            (Calculation(), .clear, ""),
-            (Calculation(method: "1 + 1"), .clear, ""),
-            (Calculation(method: "1 + "), .clear, ""),
-            (Calculation(method: "( "), .clear, ""),
-            (Calculation(method: "7 + 1d4"), .clear, ""),
-            (Calculation(method: "( 8 )"), .clear, "")
-        ]
-
-        calculations.forEach { testCase in
-            testCase.calculation.update(testCase.update)
-
-            XCTAssertEqual(testCase.calculation.method, testCase.result, "Calculation method was not updated with value \(testCase.update)")
+            XCTAssertFalse(replacedString.contains("d"), "'\(replacedString)' contained a 'd'")
         }
     }
 
     func testUpdateWithSequence() {
-        let calculations: [(calculation: Calculation, updates: [ButtonValue], result: String)] = [
+        let calculations: [(calculation: Calculation, updates: [Calculation.Component], result: String)] = [
             (Calculation(),
              [
                 .parentheses(value: .opening),
-                .die(value: 4),
+                .standardDie(roll: Roll(dieValue: 4)),
                 .parentheses(value: .closing)
              ],
              "( 1d4 )")
@@ -146,10 +125,10 @@ class CalculationTests: XCTestCase {
 
         calculations.forEach { testCase in
             testCase.updates.forEach { update in
-                testCase.calculation.update(update)
+                testCase.calculation.method.update(with: update)
             }
 
-            XCTAssertEqual(testCase.calculation.method,
+            XCTAssertEqual(testCase.calculation.method.displayString,
                            testCase.result,
                            "Calculation method was not updated with sequence \(testCase.updates.description)")
         }

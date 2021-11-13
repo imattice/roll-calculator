@@ -11,10 +11,10 @@ extension Array where Element == Calculation.Component {
     func indexForSpecificDie(dieValue: Int) -> Int? {
         firstIndex {
             /* swiftlint:disable explicit_type_interface */
-            if case .standardDie(_, let value) = $0 {
-            /* swiftlint:enable explicit_type_interface */
-                return value == dieValue
+            if case .standardDie(let roll) = $0 {
+                return roll.dieValue == dieValue
             }
+            /* swiftlint:enable explicit_type_interface */
             return false
         }
     }
