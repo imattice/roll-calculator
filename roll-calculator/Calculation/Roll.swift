@@ -6,15 +6,21 @@
 //
 
 /// An object holding values for a particular dice roll
-struct Roll {
+struct Roll: Equatable {
     /// The number of dice rolled
     let count: Int
     /// The maximum value of the die
+    /// A `0` represents a custom value that has not been set yet
     let dieValue: Int
     /// Holds a record of each individual random number generated
     var results: [Int] = [Int]()
     /// The sum of all calculated rolls
     var result: Int { results.reduce(0, +) }
+    /// A string used to display the roll object, like "1d4"
+    var displayString: String {
+        let value: String = dieValue == 0 ? "x" : String(dieValue)
+        return "\(count)d\(value)"
+    }
 
     /// Standard initializer using direct properties
     init(count: Int = 1, dieValue: Int) {
