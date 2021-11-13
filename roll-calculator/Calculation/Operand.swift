@@ -6,17 +6,17 @@
 //
 
 enum Operand {
-    case plus
-    case minus
+    case add
+    case subtract
     case multiply
     case divide
 
     var symbol: String {
         switch self {
-        case .plus:
+        case .add:
             return "+"
 
-        case .minus:
+        case .subtract:
             return "-"
 
         case .multiply:
@@ -29,7 +29,7 @@ enum Operand {
 
     var displaySymbol: String {
         switch self {
-        case .plus, .minus:
+        case .add, .subtract:
             return symbol
 
         case .multiply:
