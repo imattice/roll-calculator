@@ -26,6 +26,9 @@
 		7F7AAD63273CC79B0034447F /* CalculationMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD62273CC79B0034447F /* CalculationMethodTests.swift */; };
 		7F7AAD65273CE10D0034447F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD64273CE10D0034447F /* Array.swift */; };
 		7F7AAD69273E38860034447F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD68273E38860034447F /* Int.swift */; };
+		7F7AAD6C2740170D0034447F /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD6A2740170D0034447F /* main.xcdatamodeld */; };
+		7F7AAD6E2740189B0034447F /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD6D2740189B0034447F /* PersistenceManager.swift */; };
+		7F7AAD7027403A630034447F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AAD6F27403A630034447F /* ErrorHandler.swift */; };
 		7F9AE2612729CD0200E42678 /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */; };
 		7F9AE2632729CFF400E42678 /* CalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AE2622729CFF400E42678 /* CalculationError.swift */; };
 		7FC0C92826D1E50000A55FB8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */; };
@@ -85,6 +88,9 @@
 		7F7AAD62273CC79B0034447F /* CalculationMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTests.swift; sourceTree = "<group>"; };
 		7F7AAD64273CE10D0034447F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7F7AAD68273E38860034447F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		7F7AAD6B2740170D0034447F /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
+		7F7AAD6D2740189B0034447F /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		7F7AAD6F27403A630034447F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7F9AE2602729CD0200E42678 /* InterfaceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
 		7F9AE2622729CFF400E42678 /* CalculationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationError.swift; sourceTree = "<group>"; };
 		7FC0C92726D1E50000A55FB8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -150,8 +156,8 @@
 		7F3F230426E43E44007DF0BC /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				7F9AE2622729CFF400E42678 /* CalculationError.swift */,
-				7F3F230226E43E39007DF0BC /* RollError.swift */,
+				7F7AAD6F27403A630034447F /* ErrorHandler.swift */,
+				7F7AAD7127403A940034447F /* ErrorTypes */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -216,6 +222,15 @@
 			path = Calculation;
 			sourceTree = "<group>";
 		};
+		7F7AAD7127403A940034447F /* ErrorTypes */ = {
+			isa = PBXGroup;
+			children = (
+				7F9AE2622729CFF400E42678 /* CalculationError.swift */,
+				7F3F230226E43E39007DF0BC /* RollError.swift */,
+			);
+			path = ErrorTypes;
+			sourceTree = "<group>";
+		};
 		7FCFAA2F26D1695E00DC8FEB = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +254,7 @@
 		7FCFAA3A26D1695E00DC8FEB /* roll-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				7F7AAD6D2740189B0034447F /* PersistenceManager.swift */,
 				7FCFAA6326D16A1A00DC8FEB /* SwiftUI */,
 				7F7AAD5D273CB9730034447F /* Calculation */,
 				7FC0C93126E1598600A55FB8 /* RollLog.swift */,
@@ -247,6 +263,7 @@
 				7F3F22FF26E3C074007DF0BC /* Extensions */,
 				7F3F68F826E849910055ABC7 /* Assets */,
 				7FCFAA4126D1695F00DC8FEB /* Preview Content */,
+				7F7AAD6A2740170D0034447F /* main.xcdatamodeld */,
 			);
 			path = "roll-calculator";
 			sourceTree = "<group>";
@@ -468,6 +485,7 @@
 				7FCFAA3E26D1695E00DC8FEB /* CalculatorView.swift in Sources */,
 				7F3F230126E3C0F6007DF0BC /* Regex.swift in Sources */,
 				7F3F68EE26E83F040055ABC7 /* DieButton.swift in Sources */,
+				7F7AAD6E2740189B0034447F /* PersistenceManager.swift in Sources */,
 				7F3F68EA26E839F20055ABC7 /* EvaluateButton.swift in Sources */,
 				7FC0C92C26D1FC6700A55FB8 /* DisplayView.swift in Sources */,
 				7F3F68F026E83F0F0055ABC7 /* OperandButton.swift in Sources */,
@@ -476,7 +494,9 @@
 				7FCFAA6726D16A3B00DC8FEB /* AccessibiltyTextPreview.swift in Sources */,
 				7F3F68F726E8497C0055ABC7 /* AppColor.swift in Sources */,
 				7FCFAA3C26D1695E00DC8FEB /* Main.swift in Sources */,
+				7F7AAD6C2740170D0034447F /* main.xcdatamodeld in Sources */,
 				7FC0C92A26D1E50500A55FB8 /* KeyView.swift in Sources */,
+				7F7AAD7027403A630034447F /* ErrorHandler.swift in Sources */,
 				7FCFAA6A26D1ADF400DC8FEB /* DevicePreview.swift in Sources */,
 				7F7AAD5A273C40470034447F /* Operand.swift in Sources */,
 				7F3F68FF26E853520055ABC7 /* Color.swift in Sources */,
@@ -841,6 +861,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F7AAD6A2740170D0034447F /* main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F7AAD6B2740170D0034447F /* main.xcdatamodel */,
+			);
+			currentVersion = 7F7AAD6B2740170D0034447F /* main.xcdatamodel */;
+			path = main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7FCFAA3026D1695E00DC8FEB /* Project object */;
 }
