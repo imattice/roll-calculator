@@ -102,7 +102,7 @@
 		7FC0C93126E1598600A55FB8 /* RollLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollLog.swift; sourceTree = "<group>"; };
 		7FC0C93526E163AD00A55FB8 /* CalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTests.swift; sourceTree = "<group>"; };
 		7FC9CB7E2793419900E1C601 /* KeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyType.swift; sourceTree = "<group>"; };
-		7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "roll-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCFAA3826D1695E00DC8FEB /* Spin Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spin Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCFAA3B26D1695E00DC8FEB /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7FCFAA3D26D1695E00DC8FEB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		7FCFAA3F26D1695F00DC8FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		7FCFAA3926D1695E00DC8FEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */,
+				7FCFAA3826D1695E00DC8FEB /* Spin Dice.app */,
 				7FCFAA4826D1695F00DC8FEB /* roll-calculatorTests.xctest */,
 				7FCFAA5226D1695F00DC8FEB /* roll-calculatorUITests.xctest */,
 			);
@@ -349,7 +349,7 @@
 			);
 			name = "roll-calculator";
 			productName = "roll-calculator";
-			productReference = 7FCFAA3826D1695E00DC8FEB /* roll-calculator.app */;
+			productReference = 7FCFAA3826D1695E00DC8FEB /* Spin Dice.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7FCFAA4726D1695F00DC8FEB /* roll-calculatorTests */ = {
@@ -698,7 +698,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spin Dice";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -728,7 +728,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikemattice.roll-calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spin Dice";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
