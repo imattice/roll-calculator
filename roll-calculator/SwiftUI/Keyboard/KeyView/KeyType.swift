@@ -34,14 +34,11 @@ enum KeyType {
         case .parenthesis(let parenState):
             return parenState.symbol
 
-        case .evaluate:
-            return "Roll!"
-
         case .operand,
                 .clear,
                 .aptitude,
-                .backspace:
-//                .evaluate:
+                .backspace,
+                .evaluate:
             return nil
         }
     }
@@ -50,9 +47,12 @@ enum KeyType {
         switch self {
         case .numeral,
                 .roll,
-                .evaluate,
                 .parenthesis:
             return nil
+
+        case .evaluate:
+            return Image("Die")
+                .resizable()
 
         case .operand(let operand):
             switch operand {
@@ -86,9 +86,6 @@ enum KeyType {
 
         case .clear:
             return Image(systemName: "clear")
-
-//        case .evaluate:
-//            return Image(systemName: "die.face.1")
         }
     }
 
@@ -140,7 +137,7 @@ enum KeyType {
         switch self {
         case .numeral(let number):
             return .numeral(value: number)
-            
+
         case .roll(let roll):
             return roll.dieValue == 0 ? .customDie(roll: roll) : .standardDie(roll: roll)
 

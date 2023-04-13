@@ -28,6 +28,7 @@ struct KeyView: View {
                 Text(text)
             } else if let image: Image = keyType.image {
                 image
+                    .aspectRatio(contentMode: .fit)
             } else {
                 EmptyView()
             }
