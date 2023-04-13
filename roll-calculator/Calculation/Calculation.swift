@@ -35,6 +35,10 @@ class Calculation: ObservableObject, Identifiable {
     func evaluate() -> Swift.Result<Int, CalculationError> {
         method.cleanUp()
 
+        guard method.calculationString.isEmpty == false else {
+            return .success(0)
+        }
+
         // Roll the die
         let rollsReplaced: String = rollsReplaced(method.calculationString)
 
