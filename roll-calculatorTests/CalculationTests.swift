@@ -133,4 +133,19 @@ class CalculationTests: XCTestCase {
                            "Calculation method was not updated with sequence \(testCase.updates.description)")
         }
     }
+
+    func testInitFromString() {
+        let cases: [(test: String, success: Bool)] = [
+            (test: "1 + 1", success: true),
+            (test: "1+1", success: false)
+        ]
+
+        cases.forEach { testCase in
+            if Calculation(from: testCase.test) != nil {
+                XCTAssertTrue(testCase.success)
+            } else {
+                XCTAssertFalse(testCase.success)
+            }
+        }
+    }
 }

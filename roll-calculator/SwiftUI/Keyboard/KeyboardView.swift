@@ -8,84 +8,56 @@
 import SwiftUI
 
 struct KeyboardView: View {
-    // MARK: Text
-    // Numbers
-    let oneText: String = "1"
-    let twoText: String = "2"
-    let threeText: String = "3"
-    let fourText: String = "4"
-    let fiveText: String = "5"
-    let sixText: String = "6"
-    let sevenText: String = "7"
-    let eightText: String = "8"
-    let nineText: String = "9"
-    let zeroText: String = "0"
-    // Die
-    let d4Text: String = "d4"
-    let d6Text: String = "d6"
-    let d8Text: String = "d8"
-    let d10Text: String = "d10"
-    let d12Text: String = "d12"
-    let d20Text: String = "d20"
-    let d100Text: String = "d100"
-    let dXText: String = "dx"
-    // Operators
-    let plusText: String = "+"
-    let minusText: String = "-"
-    let multiplyText: String = "x"
-    let divideText: String = "/"
-    let equalText: String = "="
-
-    // MARK: Spacing
-    let buttonSpacing: CGFloat = 0
     var body: some View {
-        // swiftlint:disable closure_body_length
-        GeometryReader { geo in
-            VStack(spacing: buttonSpacing) {
-                HStack(spacing: buttonSpacing) {
-                    DieButton(d12Text)
-                    DieButton(d20Text)
-                    DieButton(d100Text)
-                    DieButton(dXText)
-                }
-                HStack(spacing: buttonSpacing) {
-                    DieButton(d4Text)
-                    DieButton(d6Text)
-                    DieButton(d8Text)
-                    DieButton(d10Text)
-                }
-                HStack(spacing: buttonSpacing) {
-                    NumericButton(sevenText)
-                    NumericButton(eightText)
-                    NumericButton(nineText)
-                    OperandButton(divideText)
-                }
-                HStack(spacing: buttonSpacing) {
-                    NumericButton(fourText)
-                    NumericButton(fiveText)
-                    NumericButton(sixText)
-                    OperandButton(multiplyText)
-                }
-                HStack(spacing: buttonSpacing) {
-                    NumericButton(oneText)
-                    NumericButton(twoText)
-                    NumericButton(threeText)
-                    OperandButton(minusText)
-                }
-                HStack(spacing: buttonSpacing) {
-                    NumericButton(zeroText)
-                    EvaluateButton()
-                        .frame(width: geo.size.width * 0.5)
-                    OperandButton(plusText)
-                }
+        // swiftlint:disable:next closure_body_length
+        VStack {
+            HStack {
+                KeyView(.roll(.d12))
+                KeyView(.roll(.d20))
+                KeyView(.roll(.d100))
+                KeyView(.roll(Roll(dieValue: 0)))
+            }
+            HStack {
+                KeyView(.roll(.d4))
+                KeyView(.roll(.d6))
+                KeyView(.roll(.d8))
+                KeyView(.roll(.d10))
+            }
+            HStack {
+                KeyView(.parenthesis(.opening))
+                KeyView(.parenthesis(.closing))
+                KeyView(.clear)
+                KeyView(.backspace)
+            }
+            HStack {
+                KeyView(.numeral(7))
+                KeyView(.numeral(8))
+                KeyView(.numeral(9))
+                KeyView(.operand(.divide))
+            }
+            HStack {
+                KeyView(.numeral(4))
+                KeyView(.numeral(5))
+                KeyView(.numeral(6))
+                KeyView(.operand(.multiply))
+            }
+            HStack {
+                KeyView(.numeral(1))
+                KeyView(.numeral(2))
+                KeyView(.numeral(3))
+                KeyView(.operand(.subtract))
+            }
+            HStack {
+                KeyView(.numeral(0))
+                KeyView(.evaluate)
+                KeyView(.operand(.add))
             }
         }
-        // swiftlint:enable closure_body_length
     }
 }
 
 struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
-            KeyboardView()
+        KeyboardView()
     }
 }

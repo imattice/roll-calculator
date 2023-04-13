@@ -9,9 +9,12 @@ import SwiftUI
 
 enum AppColor {
     enum KeyViews {
+        static let defaultText: Color = .black
+        static let defaultBackground: Color = .white
+
         enum Numeric {
-            static let text: Color = .uranianBlue
-            static let background: Color = .steelBlue
+            static let text: Color = .black
+            static let background: Color = .white
         }
         enum Die {
             static let text: Color = .arylideYellow
@@ -20,6 +23,22 @@ enum AppColor {
         enum Operand {
             static let text: Color = .cordovanRed
             static let background: Color = .steelBlue
+        }
+        enum Parenthesis {
+            static let text: Color = .black
+            static let background: Color = .white
+        }
+        enum Advantage {
+            static let text: Color = .black
+            static let background: Color = .white
+        }
+        enum Backspace {
+            static let text: Color = .black
+            static let background: Color = .white
+        }
+        enum Clear {
+            static let text: Color = .black
+            static let background: Color = .white
         }
         enum Evaluate {
             static let text: Color = .cordovanRed
@@ -31,8 +50,8 @@ enum AppColor {
 
     enum DisplayView {
         static let background: Color = .queenBlue
-        static let resultText: Color = .cordovanRed
-        static let methodText: Color = .steelBlue
+        static let resultText: Color = .white
+        static let methodText: Color = .white
     }
 
     enum NavigationButton {

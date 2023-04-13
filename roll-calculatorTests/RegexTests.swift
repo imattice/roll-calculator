@@ -61,4 +61,77 @@ class RegexTests: XCTestCase {
             XCTAssertEqual(matchString, testCase.result)
         }
     }
+
+    func testNumeric() {
+        let cases: [(test: String, result: String?)] = [
+            (test: "1", result: "1"),
+            (test: "498", result: "498"),
+            (test: "I have 3 dogs", result: "3"),
+            (test: "zy8746ed-204ft", result: "8746"),
+            (test: "NAN", result: nil)
+        ]
+
+        cases.forEach { testCase in
+            guard let matchRange: Range = testCase.test.range(
+                of: Regex.numeric.pattern,
+                options: [.regularExpression])
+            else {
+                XCTAssertNil(testCase.result)
+                return
+            }
+
+            let matchString: String = String(testCase.test[matchRange])
+
+            XCTAssertEqual(matchString, testCase.result)
+        }
+    }
+
+    func testOperand() {
+        let cases: [(test: String, result: String?)] = [
+            (test: "+", result: "+"),
+            (test: "-", result: "-"),
+            (test: "*", result: "*"),
+            (test: "/", result: "/"),
+            (test: "1+1", result: "+"),
+            (test: ":-)", result: "-"),
+            (test: "None", result: nil)
+        ]
+
+        cases.forEach { testCase in
+            guard let matchRange: Range = testCase.test.range(
+                of: Regex.operand.pattern,
+                options: [.regularExpression])
+            else {
+                XCTAssertNil(testCase.result)
+                return
+            }
+
+            let matchString: String = String(testCase.test[matchRange])
+
+            XCTAssertEqual(matchString, testCase.result)
+        }
+    }
+
+    func testParenthesis() {
+        let cases: [(test: String, result: String?)] = [
+            (test: "()", result: "("),
+            (test: ":)", result: ")"),
+            (test: "(1(9))", result: "("),
+            (test: "None", result: nil)
+        ]
+
+        cases.forEach { testCase in
+            guard let matchRange: Range = testCase.test.range(
+                of: Regex.parenthesis.pattern,
+                options: [.regularExpression])
+            else {
+                XCTAssertNil(testCase.result)
+                return
+            }
+
+            let matchString: String = String(testCase.test[matchRange])
+
+            XCTAssertEqual(matchString, testCase.result)
+        }
+    }
 }

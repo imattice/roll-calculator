@@ -17,4 +17,14 @@ extension Color {
     static let steelBlue: Color = Color("SteelBlue")
     static let uranianBlue: Color = Color("UranianBlue")
     static let arylideYellow: Color = Color("ArylideYellow")
+
+    init(for key: ColorKey) {
+        switch key {
+        case .red:
+            self = .cordovanRed
+
+        case .fallback:
+            self = .cordovanRed
+        }
+    }
 }

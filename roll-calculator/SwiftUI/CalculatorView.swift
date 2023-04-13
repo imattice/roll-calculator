@@ -8,21 +8,16 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    let displayViewScaleFactor: CGFloat = 1 / 4
-    let keyboardViewScaleFactor: CGFloat = 3 / 4
-
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                DisplayView()
-                KeyboardView()
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    RollLogNavigationButton()
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    ProfileNavigationButton()
+            GeometryReader { geo in
+                VStack(spacing: 0) {
+                    DisplayView()
+                        .frame(maxWidth: .infinity, maxHeight: geo.size.height / 4)
+
+                    KeyboardView()
+                        .padding()
+                        .background(Color.App.Primary.dark)
                 }
             }
         }
