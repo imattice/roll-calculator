@@ -1,4 +1,4 @@
-# roll-calculator
+# Spin Dice Calculator
 An iOS application for rolling dice
 
 
