@@ -2,11 +2,11 @@
 An iOS application for rolling dice
 
 
-### Issues and bugs
+## Issues and bugs
 
 If you notice an issue with the application, please create a new bug under the "Issues" tab.
 
-### Privacy Policy
+## Privacy Policy
 
 Ike Mattice built the Spin Dice Calculator app as a Free app. This SERVICE is provided by Ike Mattice at no cost and is intended for use as is.
 
